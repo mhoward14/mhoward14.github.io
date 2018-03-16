@@ -1,0 +1,87 @@
+html{
+    font-size: 18px;
+}
+
+title{
+    font-family: 'SF Display', serif;
+    font-size: 50px; 
+}
+
+body{
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 18px;
+}
+
+.card-deck{
+    margin: auto;
+    height: auto;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    box-shadow: darkgray;
+}
+
+.img-fluid{
+    max-width: 100%;
+    position: absolute;
+    margin: auto;
+    height: auto;
+}
+
+footer{
+    position: absolute;
+    padding: 1em;
+    text-align: left
+}
+
+header{
+    display: block;
+    position: relative;
+    padding: 1em;
+}
+
+img{
+    float: center;
+    padding: .2em
+}
+
+ul{
+    list-style-type: none;
+    display: block;
+    top: auto;
+    width: 100%;
+    margin: 0em;
+    padding: 0em;
+    overflow: hidden
+}
+
+li {
+    float: bottom;
+}
+
+a {
+    display: block;
+    padding: 0em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+a {
+    display: block;
+    color: none;
+    text-align: center;
+    padding: 1px 1px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    position: relative;
+}
