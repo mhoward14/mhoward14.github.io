@@ -3,85 +3,92 @@ html{
 }
 
 title{
-    font-family: 'SF Display', serif;
-    font-size: 50px; 
+  color: whitesmoke;
+  padding: 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.646);  
 }
 
 body{
-    background: #36D1DC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    font-size: 18px;
+  background: #36D1DC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: rgba(27, 25, 157, 0.913);
+  padding: 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  text-shadow: 6px 6px 6px rgba(0, 0, 0, .6);
+  text-align: center;
 }
 
 .card-deck{
-    margin: auto;
-    height: auto;
-    width: 90%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    box-shadow: darkgray;
+  margin: auto;
+  height: auto;
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .img-fluid{
-    max-width: 100%;
-    position: absolute;
-    margin: auto;
-    height: auto;
+  max-width: 100%;
+  position: absolute;
+  margin: auto;
+  height: auto;
 }
 
 footer{
-    position: absolute;
-    padding: 1em;
-    text-align: left
+  position: absolute;
+  padding: 1em;
+  text-align: left
 }
 
 header{
-    display: block;
-    position: relative;
-    padding: 1em;
+  display: block;
+  position: relative;
+  padding: 1em;
 }
 
 img{
-    float: center;
-    padding: .2em
+  float: center;
+  padding: .2em
 }
 
 ul{
-    list-style-type: none;
-    display: block;
-    top: auto;
-    width: 100%;
-    margin: 0em;
-    padding: 0em;
-    overflow: hidden
+  list-style-type: none;
+  display: block;
+  top: auto;
+  width: 100%;
+  margin: 0em;
+  padding: 0em;
+  overflow: hidden
 }
 
 li {
-    float: bottom;
+  float: bottom;
 }
 
 a {
-    display: block;
-    padding: 0em;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
+  display: block;
+  padding: 0em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 a {
-    display: block;
-    color: none;
-    text-align: center;
-    padding: 1px 1px;
-    text-decoration: none;
+  display: block;
+  color: none;
+  text-align: center;
+  padding: 1px 1px;
+  text-decoration: none;
 }
 
 a:hover {
-    color: white;
-    position: relative;
+  color: white;
+  position: relative;
 }
