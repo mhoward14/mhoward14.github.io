@@ -2,24 +2,28 @@ html{
     font-size: 18px;
 }
 
-title{
+.heading{
   color: whitesmoke;
-  padding: 15px;
+  padding: 20px;
   font-family: 'Quicksand', sans-serif;
-  font-size: 20px;
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.646);  
+  font-size: 45px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.646);
+  text-align: center;  
 }
 
 body{
   background: #36D1DC;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: rgba(27, 25, 157, 0.913);
+  color: rgba(40, 40, 43, 0.926);
   padding: 15px;
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
   text-shadow: 6px 6px 6px rgba(0, 0, 0, .6);
-  text-align: center;
+}
+
+.card-text{
+    text-align: left;
 }
 
 .card-deck{
