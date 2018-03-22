@@ -11,6 +11,10 @@ html{
   text-align: center;  
 }
 
+i{
+    display: inline-block;
+}
+
 body{
   background: #36D1DC;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
@@ -19,7 +23,6 @@ body{
   padding: 15px;
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
-  text-shadow: 6px 6px 6px rgba(0, 0, 0, .6);
 }
 
 .card-text{
@@ -36,7 +39,7 @@ body{
 }
 
 .card{
-    height: 620px
+    height: 620px;
 }
 
 .card-deck{
