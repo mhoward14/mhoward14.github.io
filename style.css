@@ -26,14 +26,32 @@ body{
     text-align: left;
 }
 
+.btn-card{
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 25px;
+}
+
+.card{
+    height: 620px
+}
+
 .card-deck{
   margin: auto;
   height: auto;
   width: 90%;
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.jumbotron{
+    width: 79%;
+    margin: auto;
 }
 
 .img-fluid{
@@ -58,20 +76,6 @@ header{
 img{
   float: center;
   padding: .2em
-}
-
-ul{
-  list-style-type: none;
-  display: block;
-  top: auto;
-  width: 100%;
-  margin: 0em;
-  padding: 0em;
-  overflow: hidden
-}
-
-li {
-  float: bottom;
 }
 
 a {
