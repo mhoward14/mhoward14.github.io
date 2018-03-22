@@ -54,6 +54,14 @@ body{
     margin: auto;
 }
 
+h1{
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+}
+
 .img-fluid{
   max-width: 100%;
   position: absolute;
