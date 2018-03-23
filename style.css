@@ -70,7 +70,7 @@ body{
 .jumbotron{
     width: 79%;
     margin: auto;
-    height: 30%;
+    padding-top: 40px !important;
 }
 
 .display-4{
