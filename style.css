@@ -3,16 +3,17 @@ html{
 }
 
 .heading{
-  color: whitesmoke;
-  padding: 20px;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 45px;
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.646);
-  text-align: center;  
+    color: whitesmoke;
+    padding: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 45px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.646);
+    text-align: center;  
 }
 
 .icon{
     display: inline-block;
+    color: ghostwhite;
 }
 
 .inner{
@@ -27,13 +28,13 @@ html{
 }
 
 body{
-  background: #00467f;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #00467f, #159957 #f3904f);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #00467f, #159957, #f3904f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: rgba(40, 40, 43, 0.926);
-  padding: 15px;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 20px;
+    background: #667db6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #667db6, #005aa7, #005aa7, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #667db6, #005aa7, #005aa7, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    color: rgba(40, 40, 43, 0.926);
+    padding: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
 }
 
 .card-text{
@@ -54,23 +55,24 @@ body{
 }
 
 .card-deck{
-  margin: auto;
-  height: auto;
-  width: 90%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 3%;
-  padding-bottom: 3%;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 .mb-3{
-    border-width: 2px;
+    border-width: 3px;
 }
 
 .jumbotron{
-    width: 79%;
+    width: 88%;
     margin: auto;
     padding-top: 10px !important;
+    background-color: white;
 }
 
 .display-4{
@@ -92,37 +94,37 @@ p{
 }
 
 .img-fluid{
-  max-width: 100%;
-  position: absolute;
-  margin: auto;
-  height: auto;
+    max-width: 100%;
+    position: absolute;
+    margin: auto;
+    height: auto;
 }
 
 footer{
-  position: absolute;
-  padding: 1em;
-  text-align: left
+    position: absolute;
+    padding: 1em;
+    text-align: left
 }
 
 header{
-  display: block;
-  position: relative;
-  padding: 1em;
+    display: block;
+    position: relative;
+    padding: 1em;
 }
 
 img{
-  float: center;
-  padding: .2em
+    float: center;
+    padding: .2em
 }
 
 a {
-  display: block;
-  padding: 0em;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+    display: block;
+    padding: 0em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .me{
@@ -133,14 +135,14 @@ a {
 }
 
 a {
-  display: block;
-  color: none;
-  text-align: center;
-  padding: 1px 1px;
-  text-decoration: none;
+    display: block;
+    color: none;
+    text-align: center;
+    padding: 1px 1px;
+    text-decoration: none;
 }
 
 a:hover {
-  color: white;
-  position: relative;
+    color: white;
+    position: relative;
 }
