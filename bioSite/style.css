@@ -3,15 +3,16 @@ html{
 }
 
 title{
-    font-family: 'Tangerine', serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 50px; 
 }
 
 body{
-    background-color: ghostwhite;
+    background: #03001e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-size: 18px;
-    border: 7px ridge;
-    border-color: darkviolet
+    color: white
 }
 
 p{
@@ -116,7 +117,7 @@ a {
 
 li a {
     display: block;
-    color: deeppink;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
