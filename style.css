@@ -2,6 +2,10 @@ html{
     font-size: 18px;
 }
 
+title{
+    font-family: 'Quicksand', sans-serif;
+}
+
 .heading{
     color: whitesmoke;
     padding: 20px;
