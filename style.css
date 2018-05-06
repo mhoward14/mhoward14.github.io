@@ -6,6 +6,27 @@ title{
     font-family: 'Quicksand', sans-serif;
 }
 
+.navbar-dark{
+    text-align: center;
+    margin-left: 1in;
+    margin-right: 1in;
+    color: whitesmoke!important;
+    margin-top: 50px;
+}
+
+.card{
+    width: 65%;
+    margin: 20px;
+    margin-left: 105px;
+    align-content: center;
+}
+
+.gallery{
+    text-align: center;
+    margin-top: 10px;
+    color: whitesmoke;
+}
+
 .heading{
     color: whitesmoke;
     padding: 20px;
