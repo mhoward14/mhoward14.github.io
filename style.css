@@ -23,6 +23,9 @@ title{
 
 .gallery{
     text-align: center;
+    display: inline-block;
+    max-width: 50%;
+    size: 10%;
     margin-top: 10px;
     color: whitesmoke;
 }
