@@ -15,9 +15,16 @@ title{
 }
 
 .card{
-    width: 65%;
+    width: 55%;
     margin: 20px;
     margin-left: 105px;
+    align-content: center;
+    padding: center;
+}
+
+.card-body{
+    margin: auto;
+    width: auto;
     align-content: center;
 }
 
