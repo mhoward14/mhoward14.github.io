@@ -15,21 +15,24 @@ title{
 }
 
 .card{
-    width: 55%;
+    width: 40%;
+    height: auto;
     margin: 20px;
     margin-left: 105px;
     align-content: center;
+    display: inline-block;
 }
 
 .card-body{
     margin: auto;
     width: auto;
     align-content: center;
+    padding-top: 10%;
 }
 
 .gallery{
     text-align: center;
-    display: inline-block;
+    display: inline;
     max-width: 50%;
     size: 10%;
     margin-top: 10px;
