@@ -26,7 +26,8 @@ title{
 .card-body{
     margin: auto;
     width: auto;
-    align-content: center;
+    align-content: left;
+
     padding-top: 10%;
 }
 
