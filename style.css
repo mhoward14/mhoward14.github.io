@@ -8,6 +8,7 @@ title{
 
 .navbar-dark{
     text-align: center;
+    width: auto;
     margin-left: 1in;
     margin-right: 1in;
     color: whitesmoke!important;
@@ -97,18 +98,18 @@ body{
     margin: auto;
     height: auto;
     width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-left: auto%;
+    padding-right: auto;
+    padding-top: auto;
+    padding-bottom: auto;
 }
 
 .mb-3{
-    border-width: 3px;
+    border-width: 4px;
 }
 
 .jumbotron{
-    width: 88%;
+    width: auto%;
     margin: auto;
     padding-top: 10px !important;
     background-color: white;
