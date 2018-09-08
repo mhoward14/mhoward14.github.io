@@ -104,6 +104,25 @@ body{
     padding-bottom: auto;
 }
 
+.card-deck{
+    margin: auto;
+    height: auto;
+    width: 100%;
+    padding-left: auto%;
+    padding-right: auto;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.card{
+    width: 40%;
+    height: auto;
+    margin: 20px;
+    margin-left: 105px;
+    align-content: center;
+    display: inline-block;
+}
+
 .mb-3{
     border-width: 4px;
 }
