@@ -97,7 +97,7 @@ body{
 .card-deck{
     margin: auto;
     height: auto;
-    width: 100%;
+    width: auto;
     padding-left: auto%;
     padding-right: auto;
     padding-top: auto;
