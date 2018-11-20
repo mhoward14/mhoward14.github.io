@@ -94,19 +94,9 @@ body{
     height: 620px;
 }
 
-.card-deck{
+div.card-deck{
     margin: auto;
-    height: auto;
-    width: auto;
-    padding-left: auto%;
-    padding-right: auto;
-    padding-top: auto;
-    padding-bottom: auto;
-}
-
-.card-deck{
-    margin: auto;
-    height: auto;
+    height: 100%;
     width: 100%;
     padding-left: auto%;
     padding-right: auto;
@@ -123,8 +113,9 @@ body{
     display: inline-block;
 }
 
-.mb-3{
+div.card.bg-light.mb-3{
     border-width: 4px;
+    height: auto%;
 }
 
 .jumbotron{
