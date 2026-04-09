@@ -1,5 +1,5 @@
 html{
-    font-size: 18px;
+    font-size: 14px;
 }
 
 title{
@@ -8,27 +8,35 @@ title{
 
 .navbar-dark{
     text-align: center;
-    width: auto;
-    margin-left: 1in;
-    margin-right: 1in;
     color: whitesmoke!important;
-    margin-top: 50px;
+    margin-top: 20px;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar{
+    width: fit-content;
 }
 
 .card{
-    width: 40%;
+    width: 280px;
     height: auto;
-    margin: 20px;
-    margin-left: 105px;
+    margin: 15px;
     align-content: center;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-body{
-    margin: auto;
-    width: auto;
+    margin: 0;
+    width: 100%;
     align-content: left;
-    padding-top: 10%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .gallery{
@@ -44,11 +52,11 @@ title{
 
 .heading{
     color: whitesmoke;
-    padding: 20px;
+    padding: 15px;
     font-family: 'Quicksand', sans-serif;
-    font-size: 45px;
+    font-size: 2rem;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.646);
-    text-align: center;  
+    text-align: center;
 }
 
 .icon{
@@ -58,8 +66,9 @@ title{
 
 .inner{
     position: absolute;
-    right: 50px;
-    font-size: 35px;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
     color: black;
 }
 
@@ -70,11 +79,11 @@ title{
 body{
     background: #667db6;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #667db6, #005aa7, #005aa7, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #667db6, #005aa7, #005aa7, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+    background: linear-gradient(to right, #667db6, #005aa7, #005aa7, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: rgba(40, 40, 43, 0.926);
-    padding: 15px;
+    padding: 10px;
     font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .card-text{
@@ -82,35 +91,19 @@ body{
 }
 
 .btn-card{
-    position: absolute;
-    left: 50px;
-    right: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 25px;
-}
-
-.card{
-    height: 620px;
+    position: relative;
+    margin-top: auto;
+    align-self: stretch;
 }
 
 div.card-deck{
-    margin: auto;
-    height: 100%;
-    width: 100%;
-    padding-left: auto%;
-    padding-right: auto;
-    padding-top: auto;
-    padding-bottom: auto;
-}
-
-.card{
-    width: 40%;
+    margin: 0 auto;
     height: auto;
-    margin: 20px;
-    margin-left: 105px;
-    align-content: center;
-    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 div.card.bg-light.mb-3{
@@ -119,28 +112,29 @@ div.card.bg-light.mb-3{
 }
 
 .jumbotron{
-    width: 98%;
-    margin: auto;
-    padding-top: 10px !important;
+    width: 95%;
+    margin: 20px auto;
+    padding: 30px !important;
     background-color: white;
 }
 
 .display-4{
     text-align: center;
     padding: 5px;
+    font-size: 2.5rem;
 }
 
 .lead{
-    padding: 5px;
+    padding: 10px 0;
     text-align: left;
-
+    font-size: 1.1rem;
 }
 h1{
     text-align: center;
 }
 
 p{
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .img-fluid{
