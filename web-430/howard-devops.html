@@ -146,14 +146,14 @@
             }
         }
 
-        // Assign random colors to video cards
-        function randomizeCardColors() {
+        // Assign unique colors to each video card in sequence
+        function assignUniqueColors() {
             const cards = document.querySelectorAll('.video-card');
             const colors = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5', 'color-6', 'color-7'];
 
-            cards.forEach(card => {
-                const randomColor = colors[Math.floor(Math.random() * colors.length)];
-                card.classList.add(randomColor);
+            cards.forEach((card, index) => {
+                const color = colors[index % colors.length];
+                card.classList.add(color);
             });
         }
 
@@ -176,7 +176,7 @@
             });
         }
 
-        randomizeCardColors();
+        assignUniqueColors();
         initScrollAnimations();
     </script>
 </body>
