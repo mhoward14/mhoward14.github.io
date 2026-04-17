@@ -484,20 +484,6 @@ html[data-theme="dark"] .video-card:hover {
   border-top: 1px solid var(--border);
 }
 
-@keyframes bounceInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px) scale(0.95);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -507,20 +493,19 @@ html[data-theme="dark"] .video-card:hover {
   }
 }
 
-.card.in-view {
-  animation: bounceInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
 .section-title {
   animation: fadeInUp 0.6s ease-out;
 }
 
-.diagram-item.in-view {
-  animation: bounceInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-.video-card.in-view {
-  animation: bounceInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
