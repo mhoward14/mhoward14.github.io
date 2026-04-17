@@ -274,6 +274,18 @@ header {
   object-fit: contain;
 }
 
+.card.color-1 .card-image { background: linear-gradient(135deg, #00bcd4, #0097a7); }
+.card.color-2 .card-image { background: linear-gradient(135deg, #e91e63, #c2185b); }
+.card.color-3 .card-image { background: linear-gradient(135deg, #ff9800, #e65100); }
+.card.color-4 .card-image { background: linear-gradient(135deg, #9c27b0, #6a1b9a); }
+.card.color-5 .card-image { background: linear-gradient(135deg, #2196f3, #1565c0); }
+.card.color-6 .card-image { background: linear-gradient(135deg, #4caf50, #2e7d32); }
+.card.color-7 .card-image { background: linear-gradient(135deg, #00e5ff, #00838f); }
+.card.color-8 .card-image { background: linear-gradient(135deg, #f44336, #c62828); }
+.card.color-9 .card-image { background: linear-gradient(135deg, #ffc107, #f57f17); }
+.card.color-10 .card-image { background: linear-gradient(135deg, #009688, #00695c); }
+
+
 .card-body {
   padding: 25px;
   display: flex;
