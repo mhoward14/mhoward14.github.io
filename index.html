@@ -19,6 +19,7 @@
           <li><a href="web-335/howard-diagrams.html">ORD & JSON Diagrams</a></li>
           <li><a href="web-420/howard-rest.html">RESTful API</a></li>
           <li><a href="web-430/howard-devops.html">DevOps</a></li>
+          <li><a href="https://mhoward14.github.io/cyber-portfolio/">Cyber Portfolio</a></li>
         </ul>
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
@@ -49,7 +50,21 @@
       <h2 class="section-title">Projects</h2>
 
       <div class="card-grid">
-        <div class="card">
+        <div class="card color-4" style="grid-column: span 1;">
+          <div class="card-image" style="background: linear-gradient(135deg, #9c27b0, #673ab7); display: flex; align-items: center; justify-content: center; color: white;">
+            <div style="text-align: center;">
+              <i class="fas fa-lock" style="font-size: 3rem; margin-bottom: 10px; display: block;"></i>
+              <span style="font-weight: bold;">Cybersecurity</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Cyber Portfolio</h3>
+            <p class="card-text">Featured cybersecurity professional portfolio showcasing security expertise, certifications, and secure system design projects.</p>
+            <a href="https://mhoward14.github.io/cyber-portfolio/" class="card-link">View Portfolio →</a>
+          </div>
+        </div>
+
+        <div class="card color-1">
           <div class="card-image">
             <img src="images/html-css.png" alt="bioSite">
           </div>
@@ -214,6 +229,19 @@
         icon.classList.add('fa-moon');
       }
     }
+
+    // Assign random colors to cards (skip the cyber-portfolio card which already has color-4)
+    function randomizeCardColors() {
+      const cards = document.querySelectorAll('.card:not(.color-4)');
+      const colors = ['color-1', 'color-2', 'color-3', 'color-5', 'color-6', 'color-7'];
+
+      cards.forEach(card => {
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        card.classList.add(randomColor);
+      });
+    }
+
+    randomizeCardColors();
   </script>
 </body>
 
