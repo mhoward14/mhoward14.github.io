@@ -98,8 +98,8 @@ header {
 }
 
 .theme-toggle:hover {
-  background-color: #007AFF;
-  color: #ffffff;
+  background-color: var(#00bcd4);
+  color: var(--bg-primary);
   transform: rotate(20deg);
 }
 
@@ -163,9 +163,7 @@ header {
 }
 
 .social-icon:hover {
-  background-color: #007AFF;
-  color: #ffffff;
-  border-color: #007AFF;
+  color: var(--bg-primary);
   transform: translateY(-4px);
   box-shadow: 0 8px 16px var(--shadow);
 }

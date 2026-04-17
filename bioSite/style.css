@@ -96,8 +96,8 @@ header {
 }
 
 .theme-toggle:hover {
-  background-color: #007AFF;
-  color: #ffffff;
+  background-color: #00bcd4;
+  color: var(--bg-primary);
   transform: rotate(20deg);
 }
 
@@ -282,9 +282,8 @@ html[data-theme="dark"] .card:hover {
 }
 
 .social-icon:hover {
-  background-color: #007AFF;
-  color: #ffffff;
-  border-color: #007AFF;
+  background-color: var(--accent);
+  color: var(--bg-primary);
 }
 
 footer {
