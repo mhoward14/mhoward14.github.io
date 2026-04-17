@@ -3,265 +3,196 @@
 
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-
   <link href="style.css" rel="stylesheet" type="text/css">
-
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
-    crossorigin="anonymous"></script>
-
-  <div class="container">
-
-    <div class="inner">
-
-      <a class="icon" href="https://github.com/mhoward14/"><i class="fab fa-github"></i></a>
-
-      <a class="icon" href="https://www.linkedin.com/in/matthew-howard-5794b791/"><i class="fab fa-linkedin"></i></a>
-
-      <a class="icon" href="mailto: mhoward14@icloud.com"><i class="far fa-envelope"></i></a>
-
-    </div>
-
-  </div>
-
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
   <title>The Personal Portfolio of Matthew Howard</title>
-
 </head>
 
 <body>
-
-  <div class="navbar-container">
-
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-
-      <ul class="navbar-nav">
-
-        <li class="nav-item active">
-
-        <li><a href="../index.html" class="nav-link">Home</a></li>
-
-        <li><a href="../web-335/howard-diagrams.html" class="nav-link">ORD & JSON Diagrams</a></li>
-
-        <li><a href="../web-420/howard-rest.html" class="nav-link">RESTful API Presentations</a></li>
-
-        <li><a href="../web-430/howard-devops.html" class="nav-link">DevOps Presentations</a></li>
-
-        </li>
-
-      </ul>
-
-    </nav>
-
-  </div>
-
-  <h1 class="heading">The Personal Portfolio of Matthew Howard</h1>
-
-  <div class="jumbotron">
-
-    <div class="container"></div>
-
-    <h1 class="display-4">Hello, world!</h1>
-
-    <img class="me" card-img-top src="images/This%20Is%20Me.jpg" class="medium" alt="Sitting%20On%20A%20Pumpkin" style="float: left"
-      width="250" height="320" align="left" /><br clear="right"></p>
-
-    <p class="lead">My name is Matthew Howard. I'm in the U.S. Air Force where I'm currently stationed at Peterson Air
-      Force Base in Colorado Springs, CO. I joined in 2002 and have served all over the world from San Antonio, TX to
-      Osan, Republic of South Korea to both Ramstein and Geilenkirchen, Germany and everywhere in between. Please click
-      the button below to learn more about me.</p>
-
-    <a class="btn btn-outline-primary btn-lg" href="https://github.com/mhoward14/mhoward14.github.io/blob/master/my_bio.pdf"
-      role="button">About Me</a>
-
-  </div>
-
-  <div class="card-deck">
-
-    <div class="card bg-light mb-3">
-
-      <img class="card-img-top" src="images/html-css.png" alt="html-css">
-
-      <div class="card-body">
-
-        <h5 class="card-title">bioSite</h5>
-
-        <p class="card-text">This is a biosite I created on my daughter for web-200.</p>
-
-        <button type="button" class="btn btn-outline-primary btn-card"><a href="https://mhoward14.github.io/bioSite/"
-            class="card-link">bioSite</a></button>
-
-      </div>
-
+  <header>
+    <div class="top-bar">
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="web-335/howard-diagrams.html">ORD & JSON Diagrams</a></li>
+          <li><a href="web-420/howard-rest.html">RESTful API</a></li>
+          <li><a href="web-430/howard-devops.html">DevOps</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
     </div>
 
-    <div class="card bg-light mb-3">
+    <div class="hero">
+      <h1 class="main-title">MATTHEW HOWARD</h1>
+      <p class="subtitle">Full Stack Developer & Cybersecurity Professional</p>
 
-      <img class="card-img-top" src="images/Heroku.png" alt="html-css">
-
-      <div class="card-body">
-
-        <h5 class="card-title">Heroku Deployed Apps</h5>
-
-        <p class="card-text">This will take you to my Express API Gateway app deployed on Heroku.</p>
-
-        <button type="button" class="btn btn-outline-primary btn-card"><a href="https://howard-api-gateway.herokuapp.com"
-            class="card-link">API Gateway</a></button>
-
+      <div class="social-icons">
+        <a href="https://github.com/mhoward14/" class="social-icon" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/matthew-howard-5794b791/" class="social-icon" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:mhoward14@icloud.com" class="social-icon" title="Email">
+          <i class="far fa-envelope"></i>
+        </a>
       </div>
-
     </div>
+  </header>
 
-    <div class="card bg-light mb-3">
+  <main class="container">
+    <section class="projects">
+      <h2 class="section-title">Projects</h2>
 
-      <img class="card-img-top" src="images/Web-Development.jpg" alt="web-development">
-
-      <div class="card-body">
-
-        <h5 class="card-title">Personal Portfolio</h5>
-
-        <p class="card-text">This is a link to my personal portfolio on GitHub.</p>
-
-        <button type="button" class="btn btn-outline-primary btn-card"><a href="https://github.com/mhoward14/mhoward14.github.io"
-            class="card-link">Portfolio</a></button>
-
-      </div>
-
-    </div>
-
-    <div class="card bg-light mb-3">
-
-      <img class="card-img-top" src="images/JavaScript.png" alt="GitHub Logo">
-
-      <div class="card-body">
-
-        <h5 class="card-title">Web-230: Introduction to Enterprise JavaScript</h5>
-
-        <p class="card-text">This link will take you to the work I've completed in web-230.</p>
-
-        <button type="button" class="btn btn-outline-primary btn-card"><a href="https://github.com/mhoward14/web-230"
-            class="card-link">web-230</a></button>
-
-      </div>
-
-    </div>
-
-    <div class="card bg-light mb-3">
-
-      <img class="card-img-top" src="images/jquery.png" alt="GitHub Logo">
-
-      <div class="card-body">
-
-        <h5 class="card-title">Web-330: Enterprise JavaScript II</h5>
-
-        <p class="card-text">This link will take you to work I've completed in web-330.</p>
-
-        <button type="button" class="btn btn-outline-primary btn-card"><a href="https://github.com/mhoward14/web-330"
-            class="card-link">web-330</a></button>
-
-      </div>
-
-    </div>
-
-
-    <div class="card-deck">
-
-      <div class="card bg-light mb-3">
-
-        <img class="card-img-top" src="images/mongodblogo.png" alt="GitHub Logo">
-
-        <div class="card-body">
-
-          <h5 class="card-title">Web-335: Introduction to NoSQL</h5>
-
-          <p class="card-text">This link will take you to work I've completed in web-335.</p>
-
-          <button type="button" class="btn btn-outline-primary btn-card"><a href="https://github.com/mhoward14/web-335"
-              class="card-link">web-335</a></button>
-
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-image">
+            <img src="images/html-css.png" alt="bioSite">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">bioSite</h3>
+            <p class="card-text">A biosite project created for web-200.</p>
+            <a href="https://mhoward14.github.io/bioSite/" class="card-link">View Project →</a>
+          </div>
         </div>
 
-      </div>
-
-      <div class="card bg-light mb-3">
-
-        <img class="card-img-top" src="images/NodeJS.png" alt="GitHub Logo">
-
-        <div class="card-body">
-
-          <h5 class="card-title">Web-340: NodeJS with Express</h5>
-
-          <p class="card-text">This link will take you to the work I've completed in web-340.</p>
-
-          <button type="button" class="btn btn-outline-primary btn-card"><a href="https://github.com/mhoward14/web-340"
-              class="card-link">web-340</a></button>
-
+        <div class="card">
+          <div class="card-image">
+            <img src="images/Heroku.png" alt="Heroku">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Heroku Deployed Apps</h3>
+            <p class="card-text">Express API Gateway app deployed on Heroku.</p>
+            <a href="https://howard-api-gateway.herokuapp.com" class="card-link">View Project →</a>
+          </div>
         </div>
 
-      </div>
-
-      <div class="card bg-light mb-3">
-
-        <img class="card-img-top" src="images/RESTfulAPIlogo.png" alt="GitHub Logo">
-
-        <div class="card-body">
-
-          <h5 class="card-title">Web-420: RESTful Web APIs</h5>
-
-          <p class="card-text">This link will take you to work I've completed in web-420.</p>
-
-          <button type="button" class="btn btn-outline-primary btn-card"><a href="https://github.com/mhoward14/web-420"
-              class="card-link">web-420</a></button>
-
+        <div class="card">
+          <div class="card-image">
+            <img src="images/Web-Development.jpg" alt="Portfolio">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Personal Portfolio</h3>
+            <p class="card-text">My personal portfolio repository on GitHub.</p>
+            <a href="https://github.com/mhoward14/mhoward14.github.io" class="card-link">View Project →</a>
+          </div>
         </div>
 
-      </div>
-
-      <div class="card bg-light mb-3">
-
-        <img class="card-img-top" src="images/angular2typescript.png" alt="GitHub Logo">
-
-        <div class="card-body">
-
-          <h5 class="card-title">Web-425: Angular 2 Devlopment with TypeScript</h5>
-
-          <p class="card-text">This link will take you to the work I've completed in web-425.</p>
-
-          <button type="button" class="btn btn-outline-primary btn-card"><a href="https://github.com/mhoward14/web-425"
-              class="card-link">web-425</a></button>
-
+        <div class="card">
+          <div class="card-image">
+            <img src="images/JavaScript.png" alt="Web-230">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Web-230</h3>
+            <p class="card-text">Introduction to Enterprise JavaScript.</p>
+            <a href="https://github.com/mhoward14/web-230" class="card-link">View Project →</a>
+          </div>
         </div>
 
-      </div>
-
-      <div class="card bg-light mb-3">
-
-        <img class="card-img-top" src="images/mean-stack.png" alt="MEAN Stack">
-          
-        
-        
-        <img class="card-img-top" src="images/Heroku.png" alt="html-css">
-
-        <div class="card-body">
-
-          <h5 class="card-title">MEAN Stack Development Project</h5>
-
-          <p class="card-text">This will take you to my Bob's Computer Repair Shop (BCRS) app deployed on Heroku.</p>
-
-          <button type="button" class="btn btn-outline-primary btn-card"><a href="https://bobs-crs.herokuapp.com/#/homepage"
-              class="card-link">BCRS</a></button>
-
+        <div class="card">
+          <div class="card-image">
+            <img src="images/jquery.png" alt="Web-330">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Web-330</h3>
+            <p class="card-text">Enterprise JavaScript II.</p>
+            <a href="https://github.com/mhoward14/web-330" class="card-link">View Project →</a>
+          </div>
         </div>
 
+        <div class="card">
+          <div class="card-image">
+            <img src="images/mongodblogo.png" alt="Web-335">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Web-335</h3>
+            <p class="card-text">Introduction to NoSQL.</p>
+            <a href="https://github.com/mhoward14/web-335" class="card-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="images/NodeJS.png" alt="Web-340">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Web-340</h3>
+            <p class="card-text">NodeJS with Express.</p>
+            <a href="https://github.com/mhoward14/web-340" class="card-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="images/RESTfulAPIlogo.png" alt="Web-420">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Web-420</h3>
+            <p class="card-text">RESTful Web APIs.</p>
+            <a href="https://github.com/mhoward14/web-420" class="card-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="images/angular2typescript.png" alt="Web-425">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Web-425</h3>
+            <p class="card-text">Angular 2 Development with TypeScript.</p>
+            <a href="https://github.com/mhoward14/web-425" class="card-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="images/mean-stack.png" alt="MEAN Stack">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">MEAN Stack Project</h3>
+            <p class="card-text">Bob's Computer Repair Shop app deployed on Heroku.</p>
+            <a href="https://bobs-crs.herokuapp.com/#/homepage" class="card-link">View Project →</a>
+          </div>
+        </div>
       </div>
+    </section>
+  </main>
 
-    </div>
+  <footer>
+    <p>&copy; 2024 Matthew Howard. All rights reserved.</p>
+  </footer>
 
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const theme = htmlElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      htmlElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      updateThemeIcon(theme);
+    });
+
+    function updateThemeIcon(theme) {
+      const icon = themeToggle.querySelector('i');
+      if (theme === 'dark') {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    }
+  </script>
 </body>
 
 </html>
