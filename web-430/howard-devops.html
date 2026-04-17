@@ -3,155 +3,116 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  
-    <link href="../style.css" rel="stylesheet" type="text/css">
-
+    <link href="../style.css?v=2024" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-
-    <div class="container">
-
-      <div class="inner">
-
-    <a class="icon" href="https://github.com/mhoward14/"><i class="fab fa-github"></i></a>
-
-    <a class="icon" href="https://www.linkedin.com/in/matthew-howard-5794b791/"><i class="fab fa-linkedin"></i></a>
-
-    <a class="icon" href="mailto: mhoward14@icloud.com"><i class="far fa-envelope"></i></a>
-  
-    </div>
-
-    </div>
-
-    <title>The Personal Portfolio of Matthew Howard</title>
-
+    <title>DevOps Presentations - Matthew Howard</title>
 </head>
 
 <body>
+    <header>
+        <div class="top-bar">
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../web-335/howard-diagrams.html">ORD & JSON Diagrams</a></li>
+                    <li><a href="../web-420/howard-rest.html">RESTful API</a></li>
+                    <li><a href="howard-devops.html">DevOps</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
 
-    <div class="navbar-container">
-      
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <main class="container">
+        <h1 style="text-align: center; color: var(--accent); margin: 40px 0;">DevOps Presentations</h1>
 
-        <ul class="navbar-nav">
+        <div class="card">
+            <div class="card-body">
+                <video controls autoplay reload="none" style="width:100%; max-width: 700px;">
+                    <source src="../devops-presentations/howard-tech-value-stream-presentation.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
 
-          <li class="nav-item active">
+        <div class="card">
+            <div class="card-body">
+                <video controls autoplay reload="none" style="width:100%; max-width: 700px;">
+                    <source src="../devops-presentations/howard-two-pizza-rule-presentation.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
 
-            <li><a href="../index.html" class="nav-link">Home</a></li>
+        <div class="card">
+            <div class="card-body">
+                <video controls autoplay reload="none" style="width:100%; max-width: 700px;">
+                    <source src="../devops-presentations/howard-continuous-integration-presentation.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
 
-            <li><a href="../web-335/howard-diagrams.html" class="nav-link">ORD & JSON Diagrams</a></li>
-            
-            <li><a href="../web-420/howard-rest.html" class="nav-link">RESTful API Presentations</a></li>
+        <div class="card">
+            <div class="card-body">
+                <video controls autoplay reload="none" style="width:100%; max-width: 700px;">
+                    <source src="../devops-presentations/howard-pager-duty-presentation.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
 
-            <li><a href="../web-430/howard-devops.html" class="nav-link">DevOps Presentations</a></li>
+        <div class="card">
+            <div class="card-body">
+                <video controls autoplay reload="none" style="width:100%; max-width: 700px;">
+                    <source src="../devops-presentations/howard-ca-process-presentation.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
 
-          </li>
+        <div class="card">
+            <div class="card-body">
+                <video controls autoplay reload="none" style="width:100%; max-width: 700px;">
+                    <source src="../devops-presentations/howard-it-vs-business-presentation.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
 
-        </ul>
+        <div class="card">
+            <div class="card-body">
+                <video controls autoplay reload="none" style="width:100%; max-width: 700px;">
+                    <source src="../devops-presentations/howard-source-control-security-presentation.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+    </main>
 
-      </nav>
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
 
-    </div>
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', currentTheme);
+        updateThemeIcon(currentTheme);
 
-    <div class="card">     
-      
-      <div class="card-body">
-        
-        <video controls autoplay reload="none" style="width:700px;">
-          
-          <source src="../devops-presentations/howard-tech-value-stream-presentation.mp4" type="video/mp4" />
- 
-        </video>
-      
-      </div>
-    
-    </div> 
-  
-    <div class="card">     
-      
-      <div class="card-body">
-        
-        <video controls autoplay reload="none" style="width:700px;">
-          
-        <source src="../devops-presentations/howard-two-pizza-rule-presentation.mp4" type="video/mp4" />
-        
-        </video>
-      
-      </div>
-    
-    </div> 
+        themeToggle.addEventListener('click', () => {
+            const theme = htmlElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateThemeIcon(theme);
+        });
 
-    <div class="card">     
-      
-      <div class="card-body">
-        
-        <video controls autoplay reload="none" style="width:700px;">
-          
-        <source src="../devops-presentations/howard-continuous-integration-presentation.mp4" type="video/mp4" />
-        
-        </video>
-      
-      </div>
-    
-    </div> 
+        function updateThemeIcon(theme) {
+            const icon = themeToggle.querySelector('i');
+            if (theme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+    </script>
+</body>
 
-    <div class="card">     
-      
-      <div class="card-body">
-        
-        <video controls autoplay reload="none" style="width:700px;">
-          
-        <source src="../devops-presentations/howard-pager-duty-presentation.mp4" type="video/mp4" />
-        
-        </video>
-      
-      </div>
-    
-    </div> 
-
-    <div class="card">     
-      
-      <div class="card-body">
-        
-        <video controls autoplay reload="none" style="width:700px;">
-          
-        <source src="../devops-presentations/howard-ca-process-presentation.mp4" type="video/mp4" />
-        
-        </video>
-      
-      </div>
-    
-    </div>
-    
-    <div class="card">     
-      
-      <div class="card-body">
-        
-        <video controls autoplay reload="none" style="width:700px;">
-          
-        <source src="../devops-presentations/howard-it-vs-business-presentation.mp4" type="video/mp4" />
-        
-        </video>
-      
-      </div>
-    
-    </div>
-    
-    <div class="card">     
-      
-      <div class="card-body">
-        
-        <video controls autoplay reload="none" style="width:700px;">
-          
-        <source src="../devops-presentations/howard-source-control-security-presentation.mp4" type="video/mp4" />
-        
-        </video>
-      
-      </div>
-    
-    </div>
+</html>
