@@ -19,7 +19,6 @@
           <li><a href="web-335/howard-diagrams.html">ORD & JSON Diagrams</a></li>
           <li><a href="web-420/howard-rest.html">RESTful API</a></li>
           <li><a href="web-430/howard-devops.html">DevOps</a></li>
-          <li><a href="https://mhoward14.github.io/cyber-portfolio/">Cyber Portfolio</a></li>
         </ul>
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
@@ -50,21 +49,7 @@
       <h2 class="section-title">Projects</h2>
 
       <div class="card-grid">
-        <div class="card color-4" style="grid-column: span 1;">
-          <div class="card-image" style="background: linear-gradient(135deg, #9c27b0, #673ab7); display: flex; align-items: center; justify-content: center; color: white;">
-            <div style="text-align: center;">
-              <i class="fas fa-lock" style="font-size: 3rem; margin-bottom: 10px; display: block;"></i>
-              <span style="font-weight: bold;">Cybersecurity</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Cyber Portfolio</h3>
-            <p class="card-text">Featured cybersecurity professional portfolio showcasing security expertise, certifications, and secure system design projects.</p>
-            <a href="https://mhoward14.github.io/cyber-portfolio/" class="card-link">View Portfolio →</a>
-          </div>
-        </div>
-
-        <div class="card color-1">
+        <div class="card">
           <div class="card-image">
             <img src="images/html-css.png" alt="bioSite">
           </div>
@@ -178,29 +163,7 @@
   </main>
 
   <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>About</h3>
-        <p>Full Stack Developer & Cybersecurity Professional with expertise in modern web technologies and secure system design.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="web-335/howard-diagrams.html">Diagrams</a></p>
-        <p><a href="web-420/howard-rest.html">RESTful API</a></p>
-        <p><a href="web-430/howard-devops.html">DevOps</a></p>
-      </div>
-      <div class="footer-section">
-        <h3>Connect</h3>
-        <p><a href="https://github.com/mhoward14/">GitHub</a></p>
-        <p><a href="https://www.linkedin.com/in/matthew-howard-5794b791/">LinkedIn</a></p>
-        <p><a href="mailto:mhoward14@icloud.com">Email</a></p>
-      </div>
-    </div>
-    <div class="footer-divider"></div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Matthew Howard. All rights reserved.</p>
-    </div>
+    <p>&copy; 2024 Matthew Howard. All rights reserved.</p>
   </footer>
 
   <script>
@@ -229,19 +192,6 @@
         icon.classList.add('fa-moon');
       }
     }
-
-    // Assign unique colors to each card in sequence
-    function assignUniqueColors() {
-      const cards = document.querySelectorAll('.card:not(.color-4)');
-      const colors = ['color-1', 'color-2', 'color-3', 'color-5', 'color-6', 'color-7'];
-
-      cards.forEach((card, index) => {
-        const color = colors[index % colors.length];
-        card.classList.add(color);
-      });
-    }
-
-    assignUniqueColors();
   </script>
 </body>
 
