@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../style.css?v=2024" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <title>DevOps Presentations - Matthew Howard</title>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../web-335/howard-diagrams.html">ORD & JSON Diagrams</a></li>
+                    <li><a href="../web-420/howard-rest.html">RESTful API</a></li>
+                    <li><a href="howard-devops.html">DevOps</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="text-align: center; color: var(--accent); margin: 40px 0 20px 0;">DevOps Presentations</h1>
+
+        <div class="social-icons" style="margin-bottom: 40px;">
+            <a href="https://github.com/mhoward14/" class="social-icon" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/matthew-howard-5794b791/" class="social-icon" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:mhoward14@icloud.com" class="social-icon" title="Email">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+
+        <div class="video-grid">
+            <div class="video-card">
+                <video controls style="background: #000;">
+                    <source src="../devops-presentations/howard-tech-value-stream-presentation.mp4" type="video/mp4" />
+                </video>
+                <div class="video-title">Tech Value Stream</div>
+            </div>
+
+            <div class="video-card">
+                <video controls style="background: #000;">
+                    <source src="../devops-presentations/howard-two-pizza-rule-presentation.mp4" type="video/mp4" />
+                </video>
+                <div class="video-title">Two Pizza Rule</div>
+            </div>
+
+            <div class="video-card">
+                <video controls style="background: #000;">
+                    <source src="../devops-presentations/howard-continuous-integration-presentation.mp4" type="video/mp4" />
+                </video>
+                <div class="video-title">Continuous Integration</div>
+            </div>
+
+            <div class="video-card">
+                <video controls style="background: #000;">
+                    <source src="../devops-presentations/howard-pager-duty-presentation.mp4" type="video/mp4" />
+                </video>
+                <div class="video-title">PagerDuty</div>
+            </div>
+
+            <div class="video-card">
+                <video controls style="background: #000;">
+                    <source src="../devops-presentations/howard-ca-process-presentation.mp4" type="video/mp4" />
+                </video>
+                <div class="video-title">CA Process</div>
+            </div>
+
+            <div class="video-card">
+                <video controls style="background: #000;">
+                    <source src="../devops-presentations/howard-it-vs-business-presentation.mp4" type="video/mp4" />
+                </video>
+                <div class="video-title">IT vs Business</div>
+            </div>
+
+            <div class="video-card">
+                <video controls style="background: #000;">
+                    <source src="../devops-presentations/howard-source-control-security-presentation.mp4" type="video/mp4" />
+                </video>
+                <div class="video-title">Source Control Security</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Full Stack Developer & Cybersecurity Professional with expertise in modern web technologies and secure system design.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="../index.html">Home</a></p>
+                <p><a href="../web-335/howard-diagrams.html">Diagrams</a></p>
+                <p><a href="../web-420/howard-rest.html">RESTful API</a></p>
+                <p><a href="howard-devops.html">DevOps</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p><a href="https://github.com/mhoward14/">GitHub</a></p>
+                <p><a href="https://www.linkedin.com/in/matthew-howard-5794b791/">LinkedIn</a></p>
+                <p><a href="mailto:mhoward14@icloud.com">Email</a></p>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Matthew Howard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', currentTheme);
+        updateThemeIcon(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const theme = htmlElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            updateThemeIcon(theme);
+        });
+
+        function updateThemeIcon(theme) {
+            const icon = themeToggle.querySelector('i');
+            if (theme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        // Assign unique colors to each video card in sequence
+        function assignUniqueColors() {
+            const cards = document.querySelectorAll('.video-card');
+            const colors = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5', 'color-6', 'color-7'];
+
+            cards.forEach((card, index) => {
+                const color = colors[index % colors.length];
+                card.classList.add(color);
+            });
+        }
+
+        assignUniqueColors();
+    </script>
+</body>
+
+</html>
