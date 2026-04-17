@@ -230,14 +230,14 @@
       }
     }
 
-    // Assign random colors to cards (skip the cyber-portfolio card which already has color-4)
-    function randomizeCardColors() {
+    // Assign unique colors to each card in sequence
+    function assignUniqueColors() {
       const cards = document.querySelectorAll('.card:not(.color-4)');
       const colors = ['color-1', 'color-2', 'color-3', 'color-5', 'color-6', 'color-7'];
 
-      cards.forEach(card => {
-        const randomColor = colors[Math.floor(Math.random() * colors.length)];
-        card.classList.add(randomColor);
+      cards.forEach((card, index) => {
+        const color = colors[index % colors.length];
+        card.classList.add(color);
       });
     }
 
@@ -260,7 +260,7 @@
       });
     }
 
-    randomizeCardColors();
+    assignUniqueColors();
     initScrollAnimations();
   </script>
 </body>
