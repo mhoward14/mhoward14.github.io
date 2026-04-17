@@ -508,12 +508,11 @@ html[data-theme="dark"] .video-card:hover {
 }
 
 .card {
-  opacity: 0;
   animation: bounceInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .card.in-view {
-  animation: bounceInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: bounceInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .section-title {
@@ -521,21 +520,19 @@ html[data-theme="dark"] .video-card:hover {
 }
 
 .diagram-item {
-  opacity: 0;
   animation: bounceInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .diagram-item.in-view {
-  animation: bounceInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: bounceInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .video-card {
-  opacity: 0;
   animation: bounceInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .video-card.in-view {
-  animation: bounceInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: bounceInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 @media (max-width: 768px) {
