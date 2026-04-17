@@ -78,13 +78,14 @@ header {
 }
 
 .nav-links a:hover {
-  color: var(#00bcd4);
+  color: #007AFF;
+  text-shadow: 0 0 10px rgba(0, 122, 255, 0.5);
 }
 
 .theme-toggle {
   background: none;
-  border: 2px solid var(#00bcd4);
-  color: var(#00bcd4);
+  border: 2px solid #007AFF;
+  color: #007AFF;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -238,8 +239,8 @@ header {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 24px var(--shadow-lg), 0 0 20px var(--bar-color, #00bcd4);
-  border: 2px solid var(--bar-color, #00bcd4);
+  box-shadow: 0 12px 24px var(--shadow-lg), 0 0 20px rgba(0, 122, 255, 0.4);
+  border: 2px solid #007AFF;
 }
 
 .card.color-1::before { --bar-color: #00bcd4; }
