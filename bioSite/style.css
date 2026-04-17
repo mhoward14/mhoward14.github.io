@@ -76,14 +76,13 @@ header {
 }
 
 .nav-links a:hover {
-  color: #007AFF;
-  text-shadow: 0 0 10px rgba(0, 122, 255, 0.5);
+  color: #00bcd4;
 }
 
 .theme-toggle {
   background: none;
-  border: 2px solid #007AFF;
-  color: #007AFF;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -97,8 +96,8 @@ header {
 }
 
 .theme-toggle:hover {
-  background-color: #007AFF;
-  color: #ffffff;
+  background-color: #00bcd4;
+  color: var(--bg-primary);
   transform: rotate(20deg);
 }
 
@@ -191,12 +190,12 @@ header {
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px var(--shadow-lg), 0 0 20px rgba(0, 122, 255, 0.4);
-  border: 2px solid #007AFF;
+  box-shadow: 0 20px 40px var(--shadow-lg), 0 0 20px var(--bar-color, #00bcd4);
+  border: 2px solid var(--bar-color, #00bcd4);
 }
 
 html[data-theme="dark"] .card:hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 122, 255, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px var(--bar-color, #00bcd4);
 }
 
 .card.color-1::before { --bar-color: #00bcd4; }
@@ -283,9 +282,8 @@ html[data-theme="dark"] .card:hover {
 }
 
 .social-icon:hover {
-  background-color: #007AFF;
-  color: #ffffff;
-  border-color: #007AFF;
+  background-color: var(--accent);
+  color: var(--bg-primary);
 }
 
 footer {
