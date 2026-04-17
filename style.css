@@ -253,21 +253,31 @@ header {
 .card.color-5::before { --bar-color: #2196f3; }
 .card.color-6::before { --bar-color: #4caf50; }
 .card.color-7::before { --bar-color: #00e5ff; }
+.card.color-8::before { --bar-color: #f44336; }
+.card.color-9::before { --bar-color: #ffc107; }
+.card.color-10::before { --bar-color: #009688; }
+.card.color-4::before { --bar-color: #9c27b0; }
+.card.color-5::before { --bar-color: #2196f3; }
+.card.color-6::before { --bar-color: #4caf50; }
+.card.color-7::before { --bar-color: #00e5ff; }
 
 .card-image {
   width: 100%;
-  height: 150px;
+  height: 120px;
   overflow: hidden;
   background-color: var(--bg-primary);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 
 .card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .card-body {
