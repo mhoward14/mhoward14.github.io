@@ -125,8 +125,8 @@ header {
 }
 
 .subtitle {
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--text-secondary);
   margin-bottom: 40px;
 }
@@ -242,8 +242,8 @@ header {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 24px var(--shadow-lg);
-  border-color: var(--bar-color, #00bcd4);
+  box-shadow: 0 12px 24px var(--shadow-lg), 0 0 20px var(--bar-color, #00bcd4);
+  border: 2px solid var(--bar-color, #00bcd4);
 }
 
 .card.color-1::before { --bar-color: #00bcd4; }
