@@ -55,7 +55,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .navbar {
@@ -106,7 +106,7 @@ header {
 .hero {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -122,14 +122,14 @@ header {
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--text-secondary);
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .social-icons {
   display: flex;
   gap: 20px;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .social-icon {
@@ -182,7 +182,7 @@ header {
 .section-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #00bcd4;
+  color: #00796b;
   margin-bottom: 40px;
   text-align: center;
   letter-spacing: 1px;
@@ -198,7 +198,7 @@ header {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #00bcd4, #4dd0e1);
+  background: linear-gradient(90deg, #00796b, #00897b);
   border-radius: 2px;
 }
 
