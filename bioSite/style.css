@@ -205,6 +205,9 @@ html[data-theme="dark"] .card:hover {
 .card.color-5::before { --bar-color: #2196f3; }
 .card.color-6::before { --bar-color: #4caf50; }
 .card.color-7::before { --bar-color: #00e5ff; }
+.card.color-8::before { --bar-color: #f44336; }
+.card.color-9::before { --bar-color: #ffc107; }
+.card.color-10::before { --bar-color: #009688; }
 
 .card-image {
   width: 100%;
