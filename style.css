@@ -207,7 +207,7 @@ header {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 30px;
   margin-bottom: 40px;
 }
@@ -729,17 +729,17 @@ header, main, footer {
 
 /* Shift the rest of the page to clear the fixed sidebar. Scoped to
    body.has-sidebar so the sub-pages (which keep the old top navbar)
-   are completely unaffected. */
-body.has-sidebar header,
-body.has-sidebar main,
-body.has-sidebar footer {
-  margin-left: var(--sidebar-w);
-  transition: margin-left 0.25s ease;
+   are completely unaffected. Padding on body (rather than a margin on
+   header/main/footer directly) so .container's own `margin: 0 auto`
+   centers within the space actually left over after the sidebar,
+   instead of being pinned to the sidebar's edge with the leftover
+   space dumped entirely on the right. */
+body.has-sidebar {
+  padding-left: var(--sidebar-w);
+  transition: padding-left 0.25s ease;
 }
-body.has-sidebar.sidebar-collapsed header,
-body.has-sidebar.sidebar-collapsed main,
-body.has-sidebar.sidebar-collapsed footer {
-  margin-left: var(--sidebar-w-collapsed);
+body.has-sidebar.sidebar-collapsed {
+  padding-left: var(--sidebar-w-collapsed);
 }
 
 @media (max-width: 640px) {
@@ -760,10 +760,8 @@ body.has-sidebar.sidebar-collapsed footer {
     padding-left: 0;
     padding-right: 0;
   }
-  body.has-sidebar header,
-  body.has-sidebar main,
-  body.has-sidebar footer {
-    margin-left: var(--sidebar-w-collapsed);
+  body.has-sidebar {
+    padding-left: var(--sidebar-w-collapsed);
   }
 }
 
