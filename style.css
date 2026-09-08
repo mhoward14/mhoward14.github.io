@@ -42,10 +42,7 @@ body {
 }
 
 header {
-  background-color: var(--bg-secondary);
-  border-bottom: 1px solid var(--border);
   padding: 20px 0;
-  box-shadow: 0 2px 4px var(--shadow);
 }
 
 .theme-toggle {
@@ -291,8 +288,6 @@ header {
 }
 
 footer {
-  background-color: var(--bg-secondary);
-  border-top: 1px solid var(--border);
   padding: 60px 20px;
   margin-top: 60px;
 }
