@@ -114,7 +114,7 @@ header {
 .main-title {
   font-size: 3rem;
   font-weight: 700;
-  color: var(#00bcd4);
+  color: var(--accent);
   margin-bottom: 10px;
   letter-spacing: 2px;
 }
@@ -136,7 +136,7 @@ header {
 .social-icon {
   width: 50px;
   height: 50px;
-  border: 2px solid var(#00bcd4);
+  border: 2px solid var(--accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -157,7 +157,7 @@ header {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background-color: var(#00bcd4);
+  background-color: var(--accent);
   transform: translate(-50%, -50%);
   transition: width 0.4s, height 0.4s;
   z-index: -1;
@@ -311,7 +311,7 @@ header {
 }
 
 .card-link {
-  color: var(#00bcd4);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s;
@@ -320,7 +320,7 @@ header {
 }
 
 .card-link:hover {
-  color: var(#00bcd4-light);
+  color: var(--accent-light);
   transform: translateX(4px);
 }
 
@@ -341,7 +341,7 @@ footer {
 }
 
 .footer-section h3 {
-  color: var(#00bcd4);
+  color: var(--accent);
   font-size: 1rem;
   margin-bottom: 15px;
   font-weight: 700;
@@ -360,13 +360,13 @@ footer {
 }
 
 .footer-section a:hover {
-  color: var(#00bcd4);
+  color: var(--accent);
 }
 
 .footer-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(#00bcd4), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
   margin: 40px 0;
 }
 
@@ -559,4 +559,228 @@ footer {
   .video-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ============================================================
+   DOT-GRID BACKGROUND
+   Same technique as the cyber-portfolio site: a fixed, animated
+   radial-gradient dot pattern behind all page content, tinted
+   with this site's own accent so it stays on-brand rather than
+   importing the other site's blue.
+   ============================================================ */
+body {
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--accent) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.16;
+  pointer-events: none;
+  z-index: 0;
+  animation: dot-grid-drift 24s linear infinite;
+}
+@keyframes dot-grid-drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 30px 30px; }
+}
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   SIDEBAR NAVIGATION
+   Replaces the old top navbar on the home page only (index.html).
+   Same structure/behavior as the cyber-portfolio's sidebar:
+   fixed full-height rail, collapsible to an icon-only strip,
+   state persisted to localStorage.
+   ============================================================ */
+:root {
+  --sidebar-w: 15rem;
+  --sidebar-w-collapsed: 4rem;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-w);
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border);
+  padding: 1.1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 200;
+  overflow: hidden;
+  transition: width 0.25s ease, background-color 0.3s, border-color 0.3s;
+}
+.sidebar.is-collapsed {
+  width: var(--sidebar-w-collapsed);
+}
+
+.sidebar-brand {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  padding: 0 0.6rem;
+  margin-bottom: 0.75rem;
+  white-space: nowrap;
+}
+.sidebar-brand-short {
+  display: none;
+}
+.sidebar.is-collapsed .sidebar-brand-full {
+  display: none;
+}
+.sidebar.is-collapsed .sidebar-brand-short {
+  display: block;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 0.65rem;
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.sidebar-link i {
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.sidebar-link:hover,
+.sidebar-link.is-active {
+  background: rgba(0, 188, 212, 0.1);
+  border-left-color: var(--accent);
+  color: var(--accent);
+}
+.sidebar.is-collapsed .sidebar-link {
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar-link-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sidebar.is-collapsed .sidebar-link-label {
+  display: none;
+}
+
+.sidebar-spacer {
+  flex: 1;
+}
+
+.sidebar .theme-toggle {
+  margin-left: 0;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0;
+}
+.sidebar.is-collapsed .theme-toggle {
+  border-radius: 8px;
+}
+
+.sidebar-collapse-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-secondary);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s;
+}
+.sidebar-collapse-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.sidebar.is-collapsed .sidebar-collapse-btn {
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Shift the rest of the page to clear the fixed sidebar. Scoped to
+   body.has-sidebar so the sub-pages (which keep the old top navbar)
+   are completely unaffected. */
+body.has-sidebar header,
+body.has-sidebar main,
+body.has-sidebar footer {
+  margin-left: var(--sidebar-w);
+  transition: margin-left 0.25s ease;
+}
+body.has-sidebar.sidebar-collapsed header,
+body.has-sidebar.sidebar-collapsed main,
+body.has-sidebar.sidebar-collapsed footer {
+  margin-left: var(--sidebar-w-collapsed);
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    width: var(--sidebar-w-collapsed);
+    padding: 0.85rem 0.5rem;
+  }
+  .sidebar-brand-full,
+  .sidebar-link-label,
+  .sidebar-collapse-btn {
+    display: none;
+  }
+  .sidebar-brand-short {
+    display: block;
+  }
+  .sidebar-link {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  body.has-sidebar header,
+  body.has-sidebar main,
+  body.has-sidebar footer {
+    margin-left: var(--sidebar-w-collapsed);
+  }
+}
+
+/* ============================================================
+   TERMINAL-STYLE SECTION LABEL
+   Same "// LABEL" treatment as the cyber-portfolio site, themed
+   to this site's own accent instead of importing the other
+   site's palette.
+   ============================================================ */
+.section-label {
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+.section-label-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
 }
