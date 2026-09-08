@@ -10,22 +10,45 @@
     <title>RESTful API Presentations - Matthew Howard</title>
 </head>
 
-<body>
-    <header>
-        <div class="top-bar">
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../web-335/howard-diagrams.html">ORD & JSON Diagrams</a></li>
-                    <li><a href="howard-rest.html">RESTful API</a></li>
-                    <li><a href="../web-430/howard-devops.html">DevOps</a></li>
-                </ul>
-            </nav>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-            </button>
+<body class="has-sidebar">
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <span class="sidebar-brand-full">MH.PORTFOLIO</span>
+            <span class="sidebar-brand-short">MH</span>
         </div>
-    </header>
+
+        <a href="../index.html" class="sidebar-link">
+            <i class="fas fa-house"></i>
+            <span class="sidebar-link-label">Home</span>
+        </a>
+        <a href="../web-335/howard-diagrams.html" class="sidebar-link">
+            <i class="fas fa-project-diagram"></i>
+            <span class="sidebar-link-label">ORD &amp; JSON Diagrams</span>
+        </a>
+        <a href="howard-rest.html" class="sidebar-link is-active">
+            <i class="fas fa-code"></i>
+            <span class="sidebar-link-label">RESTful API</span>
+        </a>
+        <a href="../web-430/howard-devops.html" class="sidebar-link">
+            <i class="fas fa-sync-alt"></i>
+            <span class="sidebar-link-label">DevOps</span>
+        </a>
+        <a href="https://mhoward14.github.io/cyber-portfolio/" class="sidebar-link">
+            <i class="fas fa-shield-alt"></i>
+            <span class="sidebar-link-label">Cyber Portfolio</span>
+        </a>
+
+        <div class="sidebar-spacer"></div>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <button class="sidebar-collapse-btn" id="sidebarCollapse" aria-label="Collapse navigation">
+            <i class="fas fa-chevron-left" id="sidebarCollapseIcon"></i>
+            <span class="sidebar-link-label">Collapse</span>
+        </button>
+    </aside>
 
     <main class="container">
         <h1 style="text-align: center; color: var(--accent); margin: 40px 0 20px 0;">RESTful API Presentations</h1>
@@ -145,6 +168,26 @@
                 icon.classList.add('fa-moon');
             }
         }
+
+        // Sidebar collapse -- persisted the same way as the theme preference
+        const sidebar = document.getElementById('sidebar');
+        const sidebarCollapseBtn = document.getElementById('sidebarCollapse');
+        const sidebarCollapseIcon = document.getElementById('sidebarCollapseIcon');
+
+        function setSidebarCollapsed(collapsed) {
+            sidebar.classList.toggle('is-collapsed', collapsed);
+            document.body.classList.toggle('sidebar-collapsed', collapsed);
+            sidebarCollapseIcon.classList.toggle('fa-chevron-left', !collapsed);
+            sidebarCollapseIcon.classList.toggle('fa-chevron-right', collapsed);
+        }
+
+        setSidebarCollapsed(localStorage.getItem('sidebar-collapsed') === 'true');
+
+        sidebarCollapseBtn.addEventListener('click', () => {
+            const collapsed = !sidebar.classList.contains('is-collapsed');
+            setSidebarCollapsed(collapsed);
+            localStorage.setItem('sidebar-collapsed', String(collapsed));
+        });
 
         // Assign unique colors to each video card in sequence
         function assignUniqueColors() {
