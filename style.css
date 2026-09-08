@@ -48,40 +48,6 @@ header {
   box-shadow: 0 2px 4px var(--shadow);
 }
 
-.top-bar {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 25px;
-}
-
-.navbar {
-  flex: 1;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
-
-.nav-links a {
-  color: var(--text-primary);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-  font-size: 1.05rem;
-}
-
-.nav-links a:hover {
-  color: #007AFF;
-  text-shadow: 0 0 10px rgba(0, 122, 255, 0.5);
-}
-
 .theme-toggle {
   background: none;
   border: 2px solid #007AFF;
@@ -525,25 +491,6 @@ footer {
     font-size: 1rem;
   }
 
-  .nav-links {
-    gap: 15px;
-    font-size: 0.9rem;
-  }
-
-  .top-bar {
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-
-  .navbar {
-    width: 100%;
-  }
-
-  .nav-links {
-    justify-content: center;
-  }
-
   .card-grid {
     grid-template-columns: 1fr;
   }
@@ -563,10 +510,10 @@ footer {
 
 /* ============================================================
    DOT-GRID BACKGROUND
-   Same technique as the cyber-portfolio site: a fixed, animated
-   radial-gradient dot pattern behind all page content, tinted
-   with this site's own accent so it stays on-brand rather than
-   importing the other site's blue.
+   Same technique AND same blue as the cyber-portfolio site, so
+   both sites read as one consistent background in light mode.
+   (Everything else -- links, titles, footer -- keeps this site's
+   own cyan --accent; only the dot tint matches the other site.)
    ============================================================ */
 body {
   position: relative;
@@ -575,12 +522,14 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(circle, var(--accent) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(37, 99, 235, 0.22) 1px, transparent 1px);
   background-size: 30px 30px;
-  opacity: 0.16;
   pointer-events: none;
   z-index: 0;
   animation: dot-grid-drift 24s linear infinite;
+}
+html[data-theme="dark"] body::before {
+  background-image: radial-gradient(circle, rgba(59, 130, 246, 0.18) 1px, transparent 1px);
 }
 @keyframes dot-grid-drift {
   0%   { background-position: 0 0; }
@@ -728,18 +677,18 @@ header, main, footer {
 }
 
 /* Shift the rest of the page to clear the fixed sidebar. Scoped to
-   body.has-sidebar so the sub-pages (which keep the old top navbar)
-   are completely unaffected. Padding on body (rather than a margin on
-   header/main/footer directly) so .container's own `margin: 0 auto`
-   centers within the space actually left over after the sidebar,
-   instead of being pinned to the sidebar's edge with the leftover
-   space dumped entirely on the right. */
+   body.has-sidebar so any page without the sidebar is unaffected.
+   Padding on body (rather than a margin on header/main/footer
+   directly) so .container's own `margin: 0 auto` centers within the
+   space actually left over after the sidebar, instead of being
+   pinned to the sidebar's edge with the leftover space dumped
+   entirely on the right.
+
+   Always reserves the sidebar's full EXPANDED width, regardless of
+   collapse state, so collapsing the sidebar frees up empty space
+   next to the rail instead of reflowing the page content. */
 body.has-sidebar {
   padding-left: var(--sidebar-w);
-  transition: padding-left 0.25s ease;
-}
-body.has-sidebar.sidebar-collapsed {
-  padding-left: var(--sidebar-w-collapsed);
 }
 
 @media (max-width: 640px) {
