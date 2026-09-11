@@ -1,0 +1,12 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Local env files, just in case — this repo has none currently, but a
+# static site can grow a build step or local script later
+.env
+.env.local
