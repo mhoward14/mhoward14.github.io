@@ -3,8 +3,12 @@
   --bg-secondary: #ffffff;
   --text-primary: #1a1a1a;
   --text-secondary: #666666;
-  --accent: #00bcd4;
-  --accent-light: #4dd0e1;
+  /* #00bcd4 is tuned for dark backgrounds and falls short of WCAG AA
+     4.5:1 as text/fill against this theme's light backgrounds (as low
+     as 1.99:1 in places) — darkened here, verified against the actual
+     rendered backgrounds. Dark mode keeps the brighter original. */
+  --accent: #00707f;
+  --accent-light: #167683;
   --border: #e0e0e0;
   --shadow: rgba(0, 0, 0, 0.1);
   --shadow-lg: rgba(0, 0, 0, 0.15);
@@ -301,7 +305,7 @@ footer {
   margin-bottom: 40px;
 }
 
-.footer-section h3 {
+.footer-section h2 {
   color: var(--accent);
   font-size: 1rem;
   margin-bottom: 15px;
