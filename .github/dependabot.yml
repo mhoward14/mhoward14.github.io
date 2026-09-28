@@ -1,0 +1,11 @@
+# Weekly updates for the pinned GitHub Actions used by the workflows.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      actions:
+        patterns: ["*"]
