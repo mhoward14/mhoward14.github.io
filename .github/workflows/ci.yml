@@ -1,0 +1,36 @@
+# ============================================================
+# Continuous Integration
+# Runs the site check on every pull request (and on master after a
+# merge): local links resolve, every page carries the same strict
+# Content Security Policy, there is no inline code the CSP would block,
+# new-tab links use rel="noopener", and the contact address is never
+# in plain text. See .github/scripts/check_site.py.
+# ============================================================
+
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+permissions: {}
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  site-check:
+    name: Site check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Check pages, links, and security policy
+        run: python3 .github/scripts/check_site.py
