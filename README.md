@@ -44,3 +44,12 @@ Then open [http://localhost:8000](http://localhost:8000).
 ## Deployment
 
 Pushes to `master` run `.github/workflows/deploy.yml`, which publishes the repository to the `gh-pages` branch that GitHub Pages serves.
+
+Every pull request runs checks before it can reach the live site. The site check (`.github/scripts/check_site.py`) confirms:
+
+- local links resolve
+- every page carries the same strict CSP
+- there's no inline code, and every new-tab link has `rel="noopener"`
+- the contact address stays out of the source
+
+CodeQL scans `site.js` and the workflows, and Dependabot keeps the pinned actions current. To run the site check locally: `python3 .github/scripts/check_site.py`.
