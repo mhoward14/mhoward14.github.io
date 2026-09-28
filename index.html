@@ -1,293 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-g7CClnW/ws6zGnljZBWcwi/+itfBxvLiOSUk7OK8Xug=' https://use.fontawesome.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com; img-src 'self'; connect-src 'self' https://static.cloudflareinsights.com https://cloudflareinsights.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Personal portfolio of Matthew Howard, a Full Stack Developer &amp; Cybersecurity Professional. Web development coursework, RESTful API and DevOps presentations, and a featured cybersecurity portfolio.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'self' https://static.cloudflareinsights.com https://cloudflareinsights.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matthew Howard | Cybersecurity</title>
+  <meta name="description" content="Matthew Howard: Cybersecurity professional and U.S. Air Force veteran focused on GRC and RMF, security architecture, and cloud and Zero Trust security. Links to his interactive cybersecurity portfolio and résumé.">
   <meta name="author" content="Matthew Howard">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Matthew Howard | Personal Portfolio">
-  <meta property="og:description" content="Full Stack Developer &amp; Cybersecurity Professional. Web development coursework, RESTful API and DevOps presentations, and a featured cybersecurity portfolio.">
+  <meta property="og:title" content="Matthew Howard | Cybersecurity">
+  <meta property="og:description" content="Matthew Howard: Cybersecurity professional and U.S. Air Force veteran focused on GRC and RMF, security architecture, and cloud and Zero Trust security. Links to his interactive cybersecurity portfolio and résumé.">
   <meta property="og:url" content="https://mhoward14.github.io/">
-  <meta property="og:site_name" content="Matthew Howard | Personal Portfolio">
+  <meta property="og:site_name" content="Matthew Howard">
   <meta property="og:image" content="https://mhoward14.github.io/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Matthew Howard, Personal Portfolio: Full Stack Developer and Cybersecurity Professional.">
+  <meta property="og:image:alt" content="Matthew Howard: cybersecurity, GRC and RMF, cloud and Zero Trust security, U.S. Air Force veteran.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Matthew Howard | Personal Portfolio">
-  <meta name="twitter:description" content="Full Stack Developer &amp; Cybersecurity Professional. Web development coursework, RESTful API and DevOps presentations, and a featured cybersecurity portfolio.">
+  <meta name="twitter:title" content="Matthew Howard | Cybersecurity">
+  <meta name="twitter:description" content="Matthew Howard: Cybersecurity professional and U.S. Air Force veteran focused on GRC and RMF, security architecture, and cloud and Zero Trust security. Links to his interactive cybersecurity portfolio and résumé.">
   <meta name="twitter:image" content="https://mhoward14.github.io/og-image.png">
-  <meta name="twitter:image:alt" content="Matthew Howard, Personal Portfolio: Full Stack Developer and Cybersecurity Professional.">
+  <meta name="twitter:image:alt" content="Matthew Howard: cybersecurity, GRC and RMF, cloud and Zero Trust security, U.S. Air Force veteran.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="./style.css?v=2026-a11y-v1" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-  <title>The Personal Portfolio of Matthew Howard</title>
+  <link rel="stylesheet" href="style.css?v=2026-10">
+  <script src="site.js?v=2026-10"></script>
   <!-- Cloudflare Web Analytics -->
-  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "357df2900302495ba1dfe40791246cc5"}'></script>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "357df2900302495ba1dfe40791246cc5"}'></script>
   <!-- End Cloudflare Web Analytics -->
 </head>
 
-<body class="has-sidebar">
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-brand">
-      <span class="sidebar-brand-full">MH.PORTFOLIO</span>
-      <span class="sidebar-brand-short">MH</span>
-    </div>
-
-    <a href="index.html" class="sidebar-link is-active">
-      <i class="fas fa-house"></i>
-      <span class="sidebar-link-label">Home</span>
-    </a>
-    <a href="web-335/howard-diagrams.html" class="sidebar-link">
-      <i class="fas fa-project-diagram"></i>
-      <span class="sidebar-link-label">ORD &amp; JSON Diagrams</span>
-    </a>
-    <a href="web-420/howard-rest.html" class="sidebar-link">
-      <i class="fas fa-code"></i>
-      <span class="sidebar-link-label">RESTful API</span>
-    </a>
-    <a href="web-430/howard-devops.html" class="sidebar-link">
-      <i class="fas fa-sync-alt"></i>
-      <span class="sidebar-link-label">DevOps</span>
-    </a>
-    <a href="https://mhoward14.github.io/cyber-portfolio/" class="sidebar-link">
-      <i class="fas fa-shield-alt"></i>
-      <span class="sidebar-link-label">Cyber Portfolio</span>
-    </a>
-
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="sidebar" id="sidebar" aria-label="Site">
+    <div class="sidebar-brand"><span class="sidebar-brand-full">MH.PORTFOLIO</span><span class="sidebar-brand-short">MH</span></div>
+    <a href="index.html" class="sidebar-link is-active" aria-current="page"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span class="sidebar-label">Home</span></a>
+    <a href="https://mhoward14.github.io/cyber-portfolio/" class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span class="sidebar-label">Cyber Portfolio</span></a>
+    <a href="https://mhoward14.github.io/cyber-portfolio/Matthew_Howard_Resume.pdf" class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg><span class="sidebar-label">Résumé</span></a>
+    <div class="sidebar-section">Earlier work</div>
+    <a href="web-335/howard-diagrams.html" class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><path d="M6.5 10v4a3 3 0 0 0 3 3H14"/></svg><span class="sidebar-label">NoSQL Diagrams</span></a>
+    <a href="web-420/howard-rest.html" class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg><span class="sidebar-label">RESTful APIs</span></a>
+    <a href="web-430/howard-devops.html" class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.5 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg><span class="sidebar-label">DevOps</span></a>
     <div class="sidebar-spacer"></div>
+    <button type="button" class="sidebar-btn" id="themeToggle" aria-label="Switch between light and dark mode"><svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><span class="sidebar-label">Theme</span></button>
+    <button type="button" class="sidebar-btn sidebar-collapse" id="sidebarCollapse" aria-label="Collapse navigation" aria-expanded="true"><svg class="icon sidebar-collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="11 17 6 12 11 7"/><polyline points="18 17 13 12 18 7"/></svg><span class="sidebar-label">Collapse</span></button>
+  </nav>
 
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-      <i class="fas fa-moon"></i>
-    </button>
-
-    <button class="sidebar-collapse-btn" id="sidebarCollapse" aria-label="Collapse navigation">
-      <i class="fas fa-chevron-left" id="sidebarCollapseIcon"></i>
-      <span class="sidebar-link-label">Collapse</span>
-    </button>
-  </aside>
-
-  <header>
-    <div class="hero">
-      <h1 class="main-title">MATTHEW HOWARD</h1>
-      <p class="subtitle">Full Stack Developer & Cybersecurity Professional</p>
-
-      <div class="social-icons">
-        <a href="https://github.com/mhoward14/" class="social-icon" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/mhowardcybersecurity" class="social-icon" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="mailto:mhoward14@icloud.com" class="social-icon" title="Email">
-          <i class="far fa-envelope"></i>
-        </a>
+  <div class="page">
+    <header class="hero">
+      <h1>MATTHEW HOWARD</h1>
+      <p class="hero-subtitle">M.S. Cybersecurity &amp; Information Assurance</p>
+      <p class="hero-positioning">Cybersecurity<span>|</span>GRC &amp; RMF<span>|</span>Cloud &amp; Zero Trust Security<span>|</span>U.S. Air Force Veteran</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://mhoward14.github.io/cyber-portfolio/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>View Cyber Portfolio</a>
+        <a class="btn btn-secondary" href="https://mhoward14.github.io/cyber-portfolio/Matthew_Howard_Resume.pdf"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>Download Résumé</a>
       </div>
-    </div>
-  </header>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/mhowardcybersecurity" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zM5 8H0v16h5V8zm7.982 0H8.014v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0V24H24v-10.131c0-7.88-8.922-7.593-11.018-3.714V8z"/></svg></a>
+        <a href="https://github.com/mhoward14" aria-label="GitHub"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+        <a href="mailto:mhoward14@icloud.com" aria-label="Email"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
+      </div>
+    </header>
 
-  <main class="container">
-    <section class="projects">
-      <div class="section-label"><span class="section-label-text">// PROJECTS</span></div>
+    <main class="container" id="main">
+      <div class="section-label"><h2>// FEATURED</h2></div>
+      <article class="featured">
+        <div>
+          <span class="featured-kicker">CYBERSECURITY PORTFOLIO</span>
+          <h3>Interactive security tools and case studies</h3>
+          <p>Nine browser-based tools: model an attack with MITRE ATT&amp;CK, hunt for it in packet captures, work the
+            incident response, harden cloud, Zero Trust, and CI/CD settings, and track the resulting NIST SP 800-53 controls
+            and POA&amp;M. Engagement Mode links them into one exportable report, alongside eleven case-study areas.</p>
+          <ul class="chips">
+            <li>GRC &amp; RMF</li><li>NIST SP 800-53</li><li>MITRE ATT&amp;CK</li><li>Zero Trust</li><li>Cloud Security</li><li>Incident Response</li>
+          </ul>
+        </div>
+        <a class="btn btn-primary" href="https://mhoward14.github.io/cyber-portfolio/">Open the portfolio &rarr;</a>
+      </article>
 
+      <div class="section-label"><h2>// EARLIER WORK</h2><p>Web development</p></div>
+      <p class="intro">Course projects and recorded presentations from my web development studies.</p>
       <div class="card-grid">
-        <div class="card color-4" style="grid-column: span 1;">
-          <div class="card-image" style="background: linear-gradient(135deg, #9c27b0, #673ab7); display: flex; align-items: center; justify-content: center; color: white;">
-            <div style="text-align: center;">
-              <i class="fas fa-lock" style="font-size: 3rem; margin-bottom: 10px; display: block;"></i>
-              <span style="font-weight: bold;">Cybersecurity</span>
-            </div>
-          </div>
+        <a class="card" href="https://github.com/mhoward14/web-230">
+          <div class="card-logo"><img src="images/JavaScript.png" alt="" loading="lazy"></div>
           <div class="card-body">
-            <h2 class="card-title">Cyber Portfolio</h2>
-            <p class="card-text">Featured cybersecurity professional portfolio showcasing security expertise, certifications, and secure system design projects.</p>
-            <a href="https://mhoward14.github.io/cyber-portfolio/" class="card-link">View Portfolio →</a>
+            <span class="card-code">WEB 230</span>
+            <h3>Introduction to Enterprise JavaScript</h3>
+            <span class="card-more">View on GitHub &rarr;</span>
           </div>
-        </div>
-
-        <div class="card">
-          <div class="card-image">
-            <img src="images/Web-Development.jpg" alt="Portfolio">
-          </div>
+        </a>
+        <a class="card" href="https://github.com/mhoward14/web-330">
+          <div class="card-logo"><img src="images/jquery.png" alt="" loading="lazy"></div>
           <div class="card-body">
-            <h2 class="card-title">Personal Portfolio</h2>
-            <p class="card-text">My personal portfolio repository on GitHub.</p>
-            <a href="https://github.com/mhoward14/mhoward14.github.io" class="card-link">View Project →</a>
+            <span class="card-code">WEB 330</span>
+            <h3>Enterprise JavaScript II</h3>
+            <span class="card-more">View on GitHub &rarr;</span>
           </div>
-        </div>
-
-        <div class="card">
-          <div class="card-image">
-            <img src="images/JavaScript.png" alt="Web-230">
-          </div>
+        </a>
+        <a class="card" href="https://github.com/mhoward14/web-335">
+          <div class="card-logo"><img src="images/mongodblogo.png" alt="" loading="lazy"></div>
           <div class="card-body">
-            <h2 class="card-title">Web-230</h2>
-            <p class="card-text">Introduction to Enterprise JavaScript.</p>
-            <a href="https://github.com/mhoward14/web-230" class="card-link">View Project →</a>
+            <span class="card-code">WEB 335</span>
+            <h3>Introduction to NoSQL</h3>
+            <span class="card-more">View on GitHub &rarr;</span>
           </div>
-        </div>
-
-        <div class="card">
-          <div class="card-image">
-            <img src="images/jquery.png" alt="Web-330">
-          </div>
+        </a>
+        <a class="card" href="https://github.com/mhoward14/web-340">
+          <div class="card-logo"><img src="images/NodeJS.png" alt="" loading="lazy"></div>
           <div class="card-body">
-            <h2 class="card-title">Web-330</h2>
-            <p class="card-text">Enterprise JavaScript II.</p>
-            <a href="https://github.com/mhoward14/web-330" class="card-link">View Project →</a>
+            <span class="card-code">WEB 340</span>
+            <h3>NodeJS with Express</h3>
+            <span class="card-more">View on GitHub &rarr;</span>
           </div>
-        </div>
-
-        <div class="card">
-          <div class="card-image">
-            <img src="images/mongodblogo.png" alt="Web-335">
-          </div>
+        </a>
+        <a class="card" href="https://github.com/mhoward14/web-420">
+          <div class="card-logo"><img src="images/RESTfulAPIlogo.png" alt="" loading="lazy"></div>
           <div class="card-body">
-            <h2 class="card-title">Web-335</h2>
-            <p class="card-text">Introduction to NoSQL.</p>
-            <a href="https://github.com/mhoward14/web-335" class="card-link">View Project →</a>
+            <span class="card-code">WEB 420</span>
+            <h3>RESTful Web APIs</h3>
+            <span class="card-more">View on GitHub &rarr;</span>
           </div>
-        </div>
-
-        <div class="card">
-          <div class="card-image">
-            <img src="images/NodeJS.png" alt="Web-340">
-          </div>
+        </a>
+        <a class="card" href="https://github.com/mhoward14/web-425">
+          <div class="card-logo"><img src="images/angular2typescript.png" alt="" loading="lazy"></div>
           <div class="card-body">
-            <h2 class="card-title">Web-340</h2>
-            <p class="card-text">NodeJS with Express.</p>
-            <a href="https://github.com/mhoward14/web-340" class="card-link">View Project →</a>
+            <span class="card-code">WEB 425</span>
+            <h3>Angular 2 Development with TypeScript</h3>
+            <span class="card-more">View on GitHub &rarr;</span>
           </div>
-        </div>
-
-        <div class="card">
-          <div class="card-image">
-            <img src="images/RESTfulAPIlogo.png" alt="Web-420">
-          </div>
+        </a>
+        <a class="card" href="https://github.com/mhoward14/web-450">
+          <div class="card-logo"><img src="images/mean-stack.png" alt="" loading="lazy"></div>
           <div class="card-body">
-            <h2 class="card-title">Web-420</h2>
-            <p class="card-text">RESTful Web APIs.</p>
-            <a href="https://github.com/mhoward14/web-420" class="card-link">View Project →</a>
+            <span class="card-code">WEB 450</span>
+            <h3>Mastering the MEAN Stack Bootcamp</h3>
+            <span class="card-more">View on GitHub &rarr;</span>
           </div>
-        </div>
-
-        <div class="card">
-          <div class="card-image">
-            <img src="images/angular2typescript.png" alt="Web-425">
-          </div>
-          <div class="card-body">
-            <h2 class="card-title">Web-425</h2>
-            <p class="card-text">Angular 2 Development with TypeScript.</p>
-            <a href="https://github.com/mhoward14/web-425" class="card-link">View Project →</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-image">
-            <img src="images/mean-stack.png" alt="Web-450">
-          </div>
-          <div class="card-body">
-            <h2 class="card-title">Web-450</h2>
-            <p class="card-text">Mastering the MEAN Stack Bootcamp.</p>
-            <a href="https://github.com/mhoward14/web-450" class="card-link">View Project →</a>
-          </div>
-        </div>
+        </a>
       </div>
-    </section>
-  </main>
+
+      <div class="section-label"><h2>// PRESENTATIONS &amp; DIAGRAMS</h2></div>
+      <div class="card-grid">
+        <a class="card" href="web-335/howard-diagrams.html">
+          <div class="card-body">
+            <span class="card-code"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><path d="M6.5 10v4a3 3 0 0 0 3 3H14"/></svg></span>
+            <h3>NoSQL Diagrams</h3>
+            <p>Data diagrams and NoSQL document structures from the Introduction to NoSQL course.</p>
+            <span class="card-more">Open &rarr;</span>
+          </div>
+        </a>
+        <a class="card" href="web-420/howard-rest.html">
+          <div class="card-body">
+            <span class="card-code"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+            <h3>RESTful API Presentations</h3>
+            <p>Recorded presentations on REST, SOAP, SOA, microservices, JSON APIs, and OAuth.</p>
+            <span class="card-more">Open &rarr;</span>
+          </div>
+        </a>
+        <a class="card" href="web-430/howard-devops.html">
+          <div class="card-body">
+            <span class="card-code"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.5 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></span>
+            <h3>DevOps Presentations</h3>
+            <p>Recorded presentations on the technology value stream, continuous integration, PagerDuty, and source-control security.</p>
+            <span class="card-more">Open &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </main>
+  </div>
 
   <footer>
     <div class="footer-content">
-      <div class="footer-section">
+      <div>
         <h2>About</h2>
-        <p>Full Stack Developer & Cybersecurity Professional with expertise in modern web technologies and secure system design.</p>
+        <p>Cybersecurity professional and U.S. Air Force veteran focused on GRC and RMF, security architecture, and cloud and Zero Trust security.</p>
       </div>
-      <div class="footer-section">
-        <h2>Quick Links</h2>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="web-335/howard-diagrams.html">Diagrams</a></p>
-        <p><a href="web-420/howard-rest.html">RESTful API</a></p>
+      <div>
+        <h2>Explore</h2>
+        <p><a href="https://mhoward14.github.io/cyber-portfolio/">Cyber Portfolio</a></p>
+        <p><a href="https://mhoward14.github.io/cyber-portfolio/Matthew_Howard_Resume.pdf">Résumé (PDF)</a></p>
+        <p><a href="web-335/howard-diagrams.html">NoSQL Diagrams</a></p>
+        <p><a href="web-420/howard-rest.html">RESTful APIs</a></p>
         <p><a href="web-430/howard-devops.html">DevOps</a></p>
       </div>
-      <div class="footer-section">
+      <div>
         <h2>Connect</h2>
-        <p><a href="https://github.com/mhoward14/">GitHub</a></p>
         <p><a href="https://www.linkedin.com/in/mhowardcybersecurity">LinkedIn</a></p>
+        <p><a href="https://github.com/mhoward14">GitHub</a></p>
         <p><a href="mailto:mhoward14@icloud.com">Email</a></p>
       </div>
     </div>
-    <div class="footer-divider"></div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Matthew Howard. All rights reserved.</p>
-    </div>
+    <div class="footer-bottom">&copy; 2026 Matthew Howard</div>
   </footer>
-
-  <script>
-    const themeToggle = document.getElementById('themeToggle');
-    const htmlElement = document.documentElement;
-
-    // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    htmlElement.setAttribute('data-theme', currentTheme);
-    updateThemeIcon(currentTheme);
-
-    themeToggle.addEventListener('click', () => {
-      const theme = htmlElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      htmlElement.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-      updateThemeIcon(theme);
-    });
-
-    function updateThemeIcon(theme) {
-      const icon = themeToggle.querySelector('i');
-      if (theme === 'dark') {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-      } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-      }
-    }
-
-    // Sidebar collapse — persisted the same way as the theme preference
-    const sidebar = document.getElementById('sidebar');
-    const sidebarCollapseBtn = document.getElementById('sidebarCollapse');
-    const sidebarCollapseIcon = document.getElementById('sidebarCollapseIcon');
-
-    function setSidebarCollapsed(collapsed) {
-      sidebar.classList.toggle('is-collapsed', collapsed);
-      document.body.classList.toggle('sidebar-collapsed', collapsed);
-      sidebarCollapseIcon.classList.toggle('fa-chevron-left', !collapsed);
-      sidebarCollapseIcon.classList.toggle('fa-chevron-right', collapsed);
-    }
-
-    setSidebarCollapsed(localStorage.getItem('sidebar-collapsed') === 'true');
-
-    sidebarCollapseBtn.addEventListener('click', () => {
-      const collapsed = !sidebar.classList.contains('is-collapsed');
-      setSidebarCollapsed(collapsed);
-      localStorage.setItem('sidebar-collapsed', String(collapsed));
-    });
-
-    // Assign sequential colors to cards (skip the cyber-portfolio card which already has color-4)
-    function assignUniqueColors() {
-      const cards = document.querySelectorAll('.card:not(.color-4)');
-      const colors = ['color-1', 'color-2', 'color-3', 'color-5', 'color-6', 'color-7', 'color-8', 'color-9', 'color-10'];
-
-      cards.forEach((card, index) => {
-        const color = colors[index % colors.length];
-        card.classList.add(color);
-      });
-    }
-
-    assignUniqueColors();
-  </script>
 </body>
 
 </html>
