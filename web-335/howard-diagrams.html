@@ -1,201 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-pxX+mb0o6T4IzmfBxEqen/Lpd4bUB9/9Qtj5/KTHRrI=' https://use.fontawesome.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com; img-src 'self'; connect-src 'self' https://static.cloudflareinsights.com https://cloudflareinsights.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="ORD and JSON schema diagrams from Matthew Howard's NoSQL data-modeling coursework.">
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link href="../style.css?v=2026-a11y-v1" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-    <title>ORD & JSON Diagrams - Matthew Howard</title>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'self' https://static.cloudflareinsights.com https://cloudflareinsights.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NoSQL Diagrams | Matthew Howard</title>
+  <meta name="description" content="Data diagrams and NoSQL document structures from the Introduction to NoSQL course. Select any diagram to open it full size.">
+  <meta name="author" content="Matthew Howard">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../style.css?v=2026-10">
+  <script src="../site.js?v=2026-10"></script>
   <!-- Cloudflare Web Analytics -->
-  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "357df2900302495ba1dfe40791246cc5"}'></script>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "357df2900302495ba1dfe40791246cc5"}'></script>
   <!-- End Cloudflare Web Analytics -->
 </head>
 
-<body class="has-sidebar">
-    <aside class="sidebar" id="sidebar">
-        <div class="sidebar-brand">
-            <span class="sidebar-brand-full">MH.PORTFOLIO</span>
-            <span class="sidebar-brand-short">MH</span>
-        </div>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="sidebar" id="sidebar" aria-label="Site">
+    <div class="sidebar-brand"><span class="sidebar-brand-full">MH.PORTFOLIO</span><span class="sidebar-brand-short">MH</span></div>
+    <a href="../index.html" class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span class="sidebar-label">Home</span></a>
+    <a href="https://mhoward14.github.io/cyber-portfolio/" class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span class="sidebar-label">Cyber Portfolio</span></a>
+    <a href="https://mhoward14.github.io/cyber-portfolio/Matthew_Howard_Resume.pdf" class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg><span class="sidebar-label">Résumé</span></a>
+    <div class="sidebar-section">Earlier work</div>
+    <a href="../web-335/howard-diagrams.html" class="sidebar-link is-active" aria-current="page"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><path d="M6.5 10v4a3 3 0 0 0 3 3H14"/></svg><span class="sidebar-label">NoSQL Diagrams</span></a>
+    <a href="../web-420/howard-rest.html" class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg><span class="sidebar-label">RESTful APIs</span></a>
+    <a href="../web-430/howard-devops.html" class="sidebar-link"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.5 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg><span class="sidebar-label">DevOps</span></a>
+    <div class="sidebar-spacer"></div>
+    <button type="button" class="sidebar-btn" id="themeToggle" aria-label="Switch between light and dark mode"><svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><span class="sidebar-label">Theme</span></button>
+    <button type="button" class="sidebar-btn sidebar-collapse" id="sidebarCollapse" aria-label="Collapse navigation" aria-expanded="true"><svg class="icon sidebar-collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="11 17 6 12 11 7"/><polyline points="18 17 13 12 18 7"/></svg><span class="sidebar-label">Collapse</span></button>
+  </nav>
 
-        <a href="../index.html" class="sidebar-link">
-            <i class="fas fa-house"></i>
-            <span class="sidebar-link-label">Home</span>
-        </a>
-        <a href="howard-diagrams.html" class="sidebar-link is-active">
-            <i class="fas fa-project-diagram"></i>
-            <span class="sidebar-link-label">ORD &amp; JSON Diagrams</span>
-        </a>
-        <a href="../web-420/howard-rest.html" class="sidebar-link">
-            <i class="fas fa-code"></i>
-            <span class="sidebar-link-label">RESTful API</span>
-        </a>
-        <a href="../web-430/howard-devops.html" class="sidebar-link">
-            <i class="fas fa-sync-alt"></i>
-            <span class="sidebar-link-label">DevOps</span>
-        </a>
-        <a href="https://mhoward14.github.io/cyber-portfolio/" class="sidebar-link">
-            <i class="fas fa-shield-alt"></i>
-            <span class="sidebar-link-label">Cyber Portfolio</span>
-        </a>
-
-        <div class="sidebar-spacer"></div>
-
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-            <i class="fas fa-moon"></i>
-        </button>
-
-        <button class="sidebar-collapse-btn" id="sidebarCollapse" aria-label="Collapse navigation">
-            <i class="fas fa-chevron-left" id="sidebarCollapseIcon"></i>
-            <span class="sidebar-link-label">Collapse</span>
-        </button>
-    </aside>
-
-    <main class="container">
-        <h1 style="text-align: center; color: var(--accent); margin: 40px 0 20px 0;">ORD & JSON Diagrams</h1>
-
-        <div class="social-icons" style="margin-bottom: 40px;">
-            <a href="https://github.com/mhoward14/" class="social-icon" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/mhowardcybersecurity" class="social-icon" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:mhoward14@icloud.com" class="social-icon" title="Email">
-                <i class="far fa-envelope"></i>
-            </a>
-        </div>
-
-        <h2 style="color: var(--text-primary); margin: 30px 0 20px 0;">Diagrams</h2>
-        <div class="diagram-grid">
-            <a href="../nosql-data-diagrams/howard-exercise-1.4-data-diagram.png" target="_blank" rel="noopener" class="diagram-item">
-                <img src="../nosql-data-diagrams/howard-exercise-1.4-data-diagram.png" alt="Exercise 1.4 Diagram"/>
-            </a>
-            <a href="../nosql-data-diagrams/howard-exercise-2.2-data-diagram.png" target="_blank" rel="noopener" class="diagram-item">
-                <img src="../nosql-data-diagrams/howard-exercise-2.2-data-diagram.png" alt="Exercise 2.2 Diagram"/>
-            </a>
-            <a href="../nosql-data-diagrams/howard-exercise-2.3-data-diagram.png" target="_blank" rel="noopener" class="diagram-item">
-                <img src="../nosql-data-diagrams/howard-exercise-2.3-data-diagram.png" alt="Exercise 2.3 Diagram"/>
-            </a>
-            <a href="../nosql-data-diagrams/howard-exercise-3.2-data-diagram.png" target="_blank" rel="noopener" class="diagram-item">
-                <img src="../nosql-data-diagrams/howard-exercise-3.2-data-diagram.png" alt="Exercise 3.2 Diagram"/>
-            </a>
-            <a href="../nosql-data-diagrams/howard-exercise-3.3-nosql-document-diagram.png" target="_blank" rel="noopener" class="diagram-item">
-                <img src="../nosql-data-diagrams/howard-exercise-3.3-nosql-document-diagram.png" alt="Exercise 3.3 Document Diagram"/>
-            </a>
-        </div>
-
-        <h2 style="color: var(--text-primary); margin: 30px 0 20px 0;">Data Structures</h2>
-        <div class="diagram-grid">
-            <a href="../nosql-data-diagrams/howard-exercise-1.4-nosql-data-structure.png" target="_blank" rel="noopener" class="diagram-item">
-                <img src="../nosql-data-diagrams/howard-exercise-1.4-nosql-data-structure.png" alt="Exercise 1.4 Data Structure"/>
-            </a>
-            <a href="../nosql-data-diagrams/howard-exercise-2.2-nosql-data-structure.png" target="_blank" rel="noopener" class="diagram-item">
-                <img src="../nosql-data-diagrams/howard-exercise-2.2-nosql-data-structure.png" alt="Exercise 2.2 Data Structure"/>
-            </a>
-            <a href="../nosql-data-diagrams/howard-exercise-2.3-nosql-data-structure.png" target="_blank" rel="noopener" class="diagram-item">
-                <img src="../nosql-data-diagrams/howard-exercise-2.3-nosql-data-structure.png" alt="Exercise 2.3 Data Structure"/>
-            </a>
-            <a href="../nosql-data-diagrams/howard-exercise-3.2-nosql-data-structure.png" target="_blank" rel="noopener" class="diagram-item">
-                <img src="../nosql-data-diagrams/howard-exercise-3.2-nosql-data-structure.png" alt="Exercise 3.2 Data Structure"/>
-            </a>
-            <a href="../nosql-data-diagrams/howard-exercise-3.3-nosql-data-structure.png" target="_blank" rel="noopener" class="diagram-item">
-                <img src="../nosql-data-diagrams/howard-exercise-3.3-nosql-data-structure.png" alt="Exercise 3.3 Data Structure"/>
-            </a>
-        </div>
+  <div class="page">
+    <main class="container" id="main">
+      <header class="page-header">
+        <a class="back-link" href="../index.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>Home</a>
+        <h1>NoSQL Diagrams</h1>
+        <p>Data diagrams and NoSQL document structures from the Introduction to NoSQL course. Select any diagram to open it full size.</p>
+      </header>
+      <div class="section-label"><h2>// DIAGRAMS</h2></div>
+      <div class="diagram-grid">
+        <a class="diagram-item" href="../nosql-data-diagrams/howard-exercise-1.4-data-diagram.png"><img src="../nosql-data-diagrams/howard-exercise-1.4-data-diagram.png" alt="Exercise 1.4: Data diagram" loading="lazy"><span>Exercise 1.4: Data diagram</span></a>
+        <a class="diagram-item" href="../nosql-data-diagrams/howard-exercise-2.2-data-diagram.png"><img src="../nosql-data-diagrams/howard-exercise-2.2-data-diagram.png" alt="Exercise 2.2: Data diagram" loading="lazy"><span>Exercise 2.2: Data diagram</span></a>
+        <a class="diagram-item" href="../nosql-data-diagrams/howard-exercise-2.3-data-diagram.png"><img src="../nosql-data-diagrams/howard-exercise-2.3-data-diagram.png" alt="Exercise 2.3: Data diagram" loading="lazy"><span>Exercise 2.3: Data diagram</span></a>
+        <a class="diagram-item" href="../nosql-data-diagrams/howard-exercise-3.2-data-diagram.png"><img src="../nosql-data-diagrams/howard-exercise-3.2-data-diagram.png" alt="Exercise 3.2: Data diagram" loading="lazy"><span>Exercise 3.2: Data diagram</span></a>
+        <a class="diagram-item" href="../nosql-data-diagrams/howard-exercise-3.3-nosql-document-diagram.png"><img src="../nosql-data-diagrams/howard-exercise-3.3-nosql-document-diagram.png" alt="Exercise 3.3: Document diagram" loading="lazy"><span>Exercise 3.3: Document diagram</span></a>
+      </div>
+      <div class="section-label"><h2>// DATA STRUCTURES</h2></div>
+      <div class="diagram-grid">
+        <a class="diagram-item" href="../nosql-data-diagrams/howard-exercise-1.4-nosql-data-structure.png"><img src="../nosql-data-diagrams/howard-exercise-1.4-nosql-data-structure.png" alt="Exercise 1.4: Data structure" loading="lazy"><span>Exercise 1.4: Data structure</span></a>
+        <a class="diagram-item" href="../nosql-data-diagrams/howard-exercise-2.2-nosql-data-structure.png"><img src="../nosql-data-diagrams/howard-exercise-2.2-nosql-data-structure.png" alt="Exercise 2.2: Data structure" loading="lazy"><span>Exercise 2.2: Data structure</span></a>
+        <a class="diagram-item" href="../nosql-data-diagrams/howard-exercise-2.3-nosql-data-structure.png"><img src="../nosql-data-diagrams/howard-exercise-2.3-nosql-data-structure.png" alt="Exercise 2.3: Data structure" loading="lazy"><span>Exercise 2.3: Data structure</span></a>
+        <a class="diagram-item" href="../nosql-data-diagrams/howard-exercise-3.2-nosql-data-structure.png"><img src="../nosql-data-diagrams/howard-exercise-3.2-nosql-data-structure.png" alt="Exercise 3.2: Data structure" loading="lazy"><span>Exercise 3.2: Data structure</span></a>
+        <a class="diagram-item" href="../nosql-data-diagrams/howard-exercise-3.3-nosql-data-structure.png"><img src="../nosql-data-diagrams/howard-exercise-3.3-nosql-data-structure.png" alt="Exercise 3.3: Data structure" loading="lazy"><span>Exercise 3.3: Data structure</span></a>
+      </div>
     </main>
+  </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h2>About</h2>
-                <p>Full Stack Developer & Cybersecurity Professional with expertise in modern web technologies and secure system design.</p>
-            </div>
-            <div class="footer-section">
-                <h2>Quick Links</h2>
-                <p><a href="../index.html">Home</a></p>
-                <p><a href="howard-diagrams.html">Diagrams</a></p>
-                <p><a href="../web-420/howard-rest.html">RESTful API</a></p>
-                <p><a href="../web-430/howard-devops.html">DevOps</a></p>
-            </div>
-            <div class="footer-section">
-                <h2>Connect</h2>
-                <p><a href="https://github.com/mhoward14/">GitHub</a></p>
-                <p><a href="https://www.linkedin.com/in/mhowardcybersecurity">LinkedIn</a></p>
-                <p><a href="mailto:mhoward14@icloud.com">Email</a></p>
-            </div>
-        </div>
-        <div class="footer-divider"></div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Matthew Howard. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const htmlElement = document.documentElement;
-
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        htmlElement.setAttribute('data-theme', currentTheme);
-        updateThemeIcon(currentTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const theme = htmlElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-            htmlElement.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-            updateThemeIcon(theme);
-        });
-
-        function updateThemeIcon(theme) {
-            const icon = themeToggle.querySelector('i');
-            if (theme === 'dark') {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }
-        }
-
-        // Sidebar collapse -- persisted the same way as the theme preference
-        const sidebar = document.getElementById('sidebar');
-        const sidebarCollapseBtn = document.getElementById('sidebarCollapse');
-        const sidebarCollapseIcon = document.getElementById('sidebarCollapseIcon');
-
-        function setSidebarCollapsed(collapsed) {
-            sidebar.classList.toggle('is-collapsed', collapsed);
-            document.body.classList.toggle('sidebar-collapsed', collapsed);
-            sidebarCollapseIcon.classList.toggle('fa-chevron-left', !collapsed);
-            sidebarCollapseIcon.classList.toggle('fa-chevron-right', collapsed);
-        }
-
-        setSidebarCollapsed(localStorage.getItem('sidebar-collapsed') === 'true');
-
-        sidebarCollapseBtn.addEventListener('click', () => {
-            const collapsed = !sidebar.classList.contains('is-collapsed');
-            setSidebarCollapsed(collapsed);
-            localStorage.setItem('sidebar-collapsed', String(collapsed));
-        });
-
-        // Assign unique colors to each diagram item in sequence
-        function assignUniqueColors() {
-            const items = document.querySelectorAll('.diagram-item');
-            const colors = ['color-1', 'color-2', 'color-3', 'color-4', 'color-5', 'color-6', 'color-7'];
-
-            items.forEach((item, index) => {
-                const color = colors[index % colors.length];
-                item.classList.add(color);
-            });
-        }
-
-        assignUniqueColors();
-    </script>
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h2>About</h2>
+        <p>Cybersecurity professional and U.S. Air Force veteran focused on GRC and RMF, security architecture, and cloud and Zero Trust security.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <p><a href="https://mhoward14.github.io/cyber-portfolio/">Cyber Portfolio</a></p>
+        <p><a href="https://mhoward14.github.io/cyber-portfolio/Matthew_Howard_Resume.pdf">Résumé (PDF)</a></p>
+        <p><a href="../web-335/howard-diagrams.html">NoSQL Diagrams</a></p>
+        <p><a href="../web-420/howard-rest.html">RESTful APIs</a></p>
+        <p><a href="../web-430/howard-devops.html">DevOps</a></p>
+      </div>
+      <div>
+        <h2>Connect</h2>
+        <p><a href="https://www.linkedin.com/in/mhowardcybersecurity">LinkedIn</a></p>
+        <p><a href="https://github.com/mhoward14">GitHub</a></p>
+        <p><a href="mailto:mhoward14@icloud.com">Email</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Matthew Howard</div>
+  </footer>
 </body>
 
 </html>
