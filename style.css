@@ -694,3 +694,6 @@ body.sidebar-collapsed footer {
     scroll-behavior: auto !important;
   }
 }
+
+/* Framed by another site: hide everything (see the guard in site.js). */
+html.is-framed body { display: none !important; }
