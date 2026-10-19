@@ -1,0 +1,10 @@
+# Security contact for mhoward14.github.io and the portfolio at /cyber-portfolio/.
+# Format: RFC 9116 (https://www.rfc-editor.org/rfc/rfc9116).
+#
+# Please report vulnerabilities privately through GitHub's private reporting form
+# below. Please do not open a public issue.
+Contact: https://github.com/mhoward14/cyber-portfolio/security/advisories/new
+Expires: 2027-04-19T00:00:00.000Z
+Preferred-Languages: en
+Policy: https://github.com/mhoward14/cyber-portfolio/blob/master/SECURITY.md
+Canonical: https://mhoward14.github.io/.well-known/security.txt

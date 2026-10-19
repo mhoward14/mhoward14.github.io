@@ -10,10 +10,16 @@ For every HTML page it verifies that:
   - every link that opens a new tab has rel="noopener"
   - the contact address never appears as plain text (site.js assembles it)
 
+It also checks .well-known/security.txt (RFC 9116): it has a contact that is
+a web address (never an email address or phone number), one Expires date,
+and is neither expired nor within 30 days of expiring, so renewal is a
+nudge while there is still time.
+
 Standard library only, so it runs with no install step.
 Usage: python3 .github/scripts/check_site.py [site-root]
 """
 
+import datetime
 import pathlib
 import re
 import sys
@@ -25,6 +31,8 @@ SKIP_DIRS = {".git", ".github", "node_modules"}
 URL_ATTRS = {("a", "href"), ("link", "href"), ("script", "src"), ("img", "src"),
              ("source", "src"), ("video", "src"), ("video", "poster"), ("audio", "src")}
 BANNED_CSP = ("'unsafe-inline'", "'unsafe-eval'", "'unsafe-hashes'")
+SECURITY_TXT = pathlib.Path(".well-known") / "security.txt"
+RENEW_WITHIN_DAYS = 30
 
 
 class Page(HTMLParser):
@@ -50,6 +58,54 @@ class Page(HTMLParser):
             self.problems.append("inline <style> block")
         if tag == "a" and a.get("target") == "_blank" and "noopener" not in (a.get("rel") or ""):
             self.problems.append(f'target="_blank" without rel="noopener": {a.get("href")}')
+
+
+def check_security_txt(root, now=None):
+    """Problems with .well-known/security.txt, as a list of messages."""
+    path = root / SECURITY_TXT
+    if not path.is_file():
+        return [f"{SECURITY_TXT}: missing"]
+    now = now or datetime.datetime.now(datetime.timezone.utc)
+    problems, fields = [], {}
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        name, sep, value = line.partition(":")
+        if not sep:
+            problems.append(f"{SECURITY_TXT}: line is not 'Field: value': {line[:60]}")
+            continue
+        fields.setdefault(name.strip().lower(), []).append(value.strip())
+
+    contacts = fields.get("contact", [])
+    if not contacts:
+        problems.append(f"{SECURITY_TXT}: no Contact field")
+    for contact in contacts:
+        if urlsplit(contact).scheme != "https":
+            problems.append(f"{SECURITY_TXT}: Contact must be an https address, not {contact.split(':')[0]}: "
+                            "keep email addresses and phone numbers out of public files")
+    expires = fields.get("expires", [])
+    if len(expires) != 1:
+        problems.append(f"{SECURITY_TXT}: needs exactly one Expires field")
+    else:
+        try:
+            when = datetime.datetime.fromisoformat(expires[0].replace("Z", "+00:00"))
+            if when.tzinfo is None:
+                raise ValueError("no time zone")
+        except ValueError:
+            problems.append(f"{SECURITY_TXT}: Expires is not an RFC 3339 date-time: {expires[0]}")
+        else:
+            left = (when - now).days
+            if when <= now:
+                problems.append(f"{SECURITY_TXT}: expired on {expires[0]}. Set a new Expires date (about six months out)")
+            elif left < RENEW_WITHIN_DAYS:
+                problems.append(f"{SECURITY_TXT}: expires in {left} days ({expires[0]}). Renew it: set Expires about six months out")
+            elif left > 366:
+                problems.append(f"{SECURITY_TXT}: Expires is more than a year away; RFC 9116 recommends less")
+    text = path.read_text(encoding="utf-8")
+    if re.search(r"mailto:|tel:|[\w.+-]+@[\w-]+\.[\w.]+", text, re.I):
+        problems.append(f"{SECURITY_TXT}: contains an email address or phone number")
+    return problems
 
 
 def main():
@@ -83,13 +139,14 @@ def main():
             failures.append(f"{page}: contact address in plain text")
     if len(set(policies.values())) > 1:
         failures.append("pages carry different Content Security Policies: " + ", ".join(policies))
+    failures += check_security_txt(ROOT)
 
     if failures:
         print(f"Site check failed ({len(failures)}):")
         for f in failures:
             print(f"  x {f}")
         sys.exit(1)
-    print(f"Site check passed: {len(pages)} pages, links resolve, one strict CSP, no inline code, address not exposed.")
+    print(f"Site check passed: {len(pages)} pages, links resolve, one strict CSP, no inline code, address not exposed, security.txt current.")
 
 
 if __name__ == "__main__":
