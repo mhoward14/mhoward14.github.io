@@ -30,6 +30,7 @@ The site has no forms, cookies, or accounts, and it's hardened like the portfoli
 - `strict-origin-when-cross-origin` referrer policy, and `rel="noopener"` on every link that opens a new tab.
 - The contact address is assembled only when a visitor reaches for the email link, so it isn't in the page source.
 - The deploy workflow pins its actions to full commit SHAs and requests only the permission it needs.
+- A [`security.txt`](https://mhoward14.github.io/.well-known/security.txt) (RFC 9116) tells researchers how to report a problem: privately, through GitHub's reporting form. It covers this site and the portfolio, which share the host. It expires every six months, and CI warns 30 days ahead; to renew it, move `Expires` in `.well-known/security.txt` about six months out.
 
 The portfolio's [SECURITY.md](https://github.com/mhoward14/cyber-portfolio/blob/master/SECURITY.md) explains the full approach and the limits of static hosting.
 
@@ -51,5 +52,6 @@ Every pull request runs checks before it can reach the live site. The site check
 - every page carries the same strict CSP
 - there's no inline code, and every new-tab link has `rel="noopener"`
 - the contact address stays out of the source
+- `.well-known/security.txt` is valid, uses a web address (never an email or phone number) for its contact, and isn't within 30 days of expiring
 
 CodeQL scans `site.js` and the workflows, and Dependabot keeps the pinned actions current. To run the site check locally: `python3 .github/scripts/check_site.py`.
