@@ -44,7 +44,7 @@ Then open [http://localhost:8000](http://localhost:8000).
 
 ## Deployment
 
-Pushes to `master` run `.github/workflows/deploy.yml`, which publishes the repository to the `gh-pages` branch that GitHub Pages serves.
+Pushes to `master` run `.github/workflows/deploy.yml`, which publishes the repository (without `.git`, `.github` or `.gitignore`) straight to GitHub Pages with GitHub's own Pages actions. There is no `gh-pages` branch. The repository's Pages source setting is **GitHub Actions**, and a deploy can also be started by hand from the Actions tab.
 
 Every pull request runs checks before it can reach the live site. The site check (`.github/scripts/check_site.py`) confirms:
 

@@ -4,23 +4,52 @@ on:
   push:
     branches:
       - master
+  # Lets a deploy be re-run by hand, for example right after switching
+  # the Pages source setting to GitHub Actions.
+  workflow_dispatch:
 
-# Least-privilege for what this job actually does: peaceiris/actions-gh-pages
-# pushes the built site to the gh-pages branch, which needs contents: write.
-permissions:
-  contents: write
+# Nothing is granted by default; the job asks for exactly what it needs.
+permissions: {}
+
+# One deploy at a time, and never cancel one halfway through publishing.
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # Pages reads the repository and writes its own deployment; id-token
+    # lets deploy-pages prove to Pages that this run is the one publishing.
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout code
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v3.9.3 (latest v3)
+      # Publish the repository as it is, minus git and workflow files. A
+      # separate folder keeps the dot-folder .well-known (security.txt)
+      # while leaving .github and .gitignore out of the public site.
+      - name: Stage the site
+        run: |
+          mkdir _site
+          tar --exclude=./_site --exclude=./.git --exclude=./.github --exclude=./.gitignore -cf - . | tar -xf - -C _site
+          test -f _site/index.html
+          test -f _site/.well-known/security.txt
+
+      - name: Upload the site
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          cname: mhoward14.github.io
+          path: _site
+          # Dot-folders are left out unless asked for; security.txt needs this.
+          include-hidden-files: true
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
